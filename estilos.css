@@ -1,0 +1,447 @@
+@font-face {
+  font-family: 'Unbounded-ExtraLight';
+  src: url('Unbounded-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-Light';
+  src: url('Unbounded-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-Regular';
+  src: url('Unbounded-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-Medium';
+  src: url('Unbounded-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-SemiBold';
+  src: url('Unbounded-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-Bold';
+  src: url('Unbounded-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-ExtraBold';
+  src: url('Unbounded-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Unbounded-Black';
+  src: url('Unbounded-Black.ttf') format('truetype');
+}
+
+
+/* Nueva clase para el diseño de la cuadrícula */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 20px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 columna por fila en pantallas pequeñas */
+  }
+}
+
+/* Este es el fondo de cada apartado */
+.contenedor{
+background-color: #131313;
+border-radius: 8px;
+}
+
+.contenedor h2{
+  background-color: rgb(61, 82, 213);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-family:'Unbounded-Light';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+}
+.contenedor p{
+  text-align: center;
+  font-family:'Unbounded-Light';
+  color: #ffffff;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+
+/* La otra versión del parrafo */
+.parrafo{
+text-align: center;
+font-family:'Unbounded-Light';
+color: #000000;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.contenedorReceta{
+background-color: lightgrey;
+border-radius: 8px;
+color: #000000;
+border-radius: 8px; /* Bordes redondeados */
+padding: 20px; /* Espaciado interno */
+margin: 20px 0; /* Espaciado externo */
+text-align: left; /* Alineación del texto a la izquierda */
+font-family: 'Unbounded-Light';
+}
+
+.contenedorReceta ul, .contenedorReceta ol {
+  margin-left: 20px; /* Identación para listas */
+  color: #000000; /* Color de texto */
+}
+
+.contenedorReceta li {
+  margin-bottom: 8px; /* Espacio entre los ítems de la lista */
+}
+
+.contenedorReceta p {
+  margin-bottom: 10px; /* Espacio entre los párrafos */
+  font-family: 'Unbounded-Light'; /* Fuente para los textos */
+}
+
+
+    
+
+a{
+  text-decoration: none;
+}    
+
+h1{
+    font-weight: bolder;
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    font-family:'Unbounded-Medium';
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+img{
+    height: 25%;
+    width: 25%;
+}
+.tabla-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: center;
+    font-family:'Unbounded Light';
+
+}
+
+th, td {
+    border: 1px solid #4e4e4e;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+    font-family:'Unbounded-Light';
+    font-weight: bolder;
+}
+
+th {
+    background-color: rgb(141, 141, 141);
+    text-align: center;
+    
+}
+.categoria1 {
+    background-color: #ff7777; /* Color para la Categoría 1 */
+}
+
+.categoria2 {
+    background-color: #86ff86; /* Color para la Categoría 2 */
+}
+
+.categoria3 {
+    background-color: #51a2ff; /* Color para la Categoría 3 */
+}
+
+.categoria4 {
+    background-color: #ffff77; /* Color para la Categoría 4 */
+}
+
+.decoenlace{
+    text-decoration: none;
+}
+
+/* CSS para el contenedor */
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Unbounded-Light';
+  color: #000000;
+}
+
+/* CSS para el botón */
+button {
+  background-color: #4CAF50; /* Color de fondo verde */
+  border: none; /* Sin borde */
+  color: rgb(8, 9, 10); /* Color del texto */
+  padding: 15px 32px; /* Espaciado interior del botón */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Márgenes para espaciamiento */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave */
+  font-family: 'Unbounded-Light';
+}
+
+/* Efecto hover (cuando el ratón pasa por encima del botón) */
+button:hover {
+  background-color: rgb(187, 52, 47); /* Color más oscuro al pasar el ratón */
+}
+
+/* Efecto de sombra */
+button:active {
+  background-color: rgb(187, 52, 47); /* Color aún más oscuro cuando se hace clic */
+  transform: translateY(4px); /* Mover ligeramente hacia abajo */
+  font-family: 'Unbounded-Regular';
+}
+
+input{
+  background-color: rgb(61, 82, 213); /* Color de fondo verde */
+  border: none; /* Sin borde */
+  color: rgb(255, 255, 255); /* Color del texto */
+  padding: 7.5px 14px; /* Espaciado interior del botón */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar como elemento en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Márgenes para espaciamiento */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave */
+  font-family: 'Unbounded-Regular';
+}
+button{
+    border: none;
+    border-radius: 5px;
+    font-family: 'Unbounded-Medium';
+    font-weight: bolder;
+    background-color:rgb(241, 136, 5);
+}
+
+select {
+    max-height: 50px;
+    overflow-y: auto;
+  }
+
+.divformulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.opcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Unbounded-Light.ttf';
+}
+#calculadora {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #opcion1 {
+    width: 100%; /* Ancho máximo igual al 100% del contenedor */
+    max-width: 200px; /* Ancho máximo específico */
+  }
+  #opciones {
+    margin-bottom: 10px; /* Espacio entre opciones y tabla */
+  }
+  
+  #tabla {
+    margin-top: 20px; /* Espacio entre opciones y tabla */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid rgb(73, 73, 73);
+    padding: 8px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+option{
+  text-align: left;
+  justify-content: left;
+  text-wrap: wrap;
+  text-align: left;
+  font-size: 75%;
+
+}  
+.opcion1{
+  text-align: left;
+  justify-content: left;
+  text-wrap: wrap;
+  text-align: left;
+  font-size: 85%;
+}
+.opciones{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ffffff;
+  font-weight: bolder;
+}
+#agregarFila{
+  border-radius: 5%;
+}
+#resultado {
+  margin-top: 20px; /* Espacio encima del resultado */
+  color: #000000; /* Color del texto del resultado */
+  font-size: 18px; /* Tamaño de la fuente del resultado */
+}
+
+/* Estilos para el menú */
+
+
+@media screen and (max-width: 600px) {
+  li {
+      float: none;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}
+
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  font-family: 'Unbounded-Regular';
+}
+
+li {
+  display: block;
+  width: 100%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.show {
+  max-height: 500px;
+}
+
+.banner-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.banner-container a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  animation: scroll 20s linear infinite;
+  margin: 0 10px; /* Espacio entre cada imagen */
+}
+
+.banner-container img {
+  width: 300px;
+  height: 150px;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+.banner-container span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Unbounded-Regular';
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.scrolling-wrapper {
+  display: flex;
+  animation: scroll 40s linear infinite;
+}
+
+.section {
+  background-color: rgb(61, 61, 61); /* Color de fondo acorde a tus estilos */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px 0; /* Espaciado externo */
+  color: #fff; /* Texto en blanco para contrastar */
+  text-align: left; /* Alineación del texto a la izquierda */
+  font-family: 'Unbounded-Light'; /* Fuente de acuerdo a tu diseño */
+}
+
+.section h2 {
+  font-family: 'Unbounded-Light'; /* Fuente más gruesa para los títulos */
+  font-size: 20px; /* Tamaño del título */
+  color: #ffffff; /* Color de los títulos */
+  margin-bottom: 10px; /* Espacio entre el título y el contenido */
+}
+

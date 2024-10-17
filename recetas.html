@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Saludables</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="acciones.js"></script>
+</head>
+<body>
+    <h1>Asistente de Gestión de Diabetes Tipo 1</h1>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calculadoraHidratos.html">Calculadora de hidratos</a></li>
+        <li><a href="calculadora.html">Calculadora de raciones</a></li>
+        <li><a href="datos.html">Datos de hidratos</a></li>
+        <li><a href="desviacion.html">Desviación del sensor</a></li>
+        <li><a href="recetas.html">Recetas Saludables</a></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.className === "") {
+                menu.className = "show";
+            } else {
+                menu.className = "";
+            }
+        }
+    </script>
+
+    <div class="header">
+        <h1>Recetas Saludables</h1>
+    </div>
+    <div class="grid-container">
+    <div class="contenedorReceta">
+        <h2>Ensalada de Quinoa y Vegetales</h2>
+        
+        <p><strong>Descripción:</strong> Esta ensalada fresca y colorida es perfecta como acompañamiento o plato principal. La quinoa es una excelente fuente de proteínas y fibra, mientras que los vegetales añaden frescura y nutrientes.</p>
+        
+        <p><strong>Porciones:</strong> 4 personas</p>
+        <p><strong>Tiempo de preparación:</strong> 15 minutos</p>
+        <p><strong>Tiempo de cocción:</strong> 20 minutos</p>
+        
+        <p><strong>Ingredientes:</strong></p>
+        <ol>
+            <li>1 taza de quinoa</li>
+            <li>2 tazas de agua</li>
+            <li>1 pimiento rojo, picado</li>
+            <li>1 pepino, picado</li>
+            <li>1 taza de tomates cherry, cortados a la mitad</li>
+            <li>1/4 taza de aceite de oliva</li>
+            <li>2 cucharadas de jugo de limón</li>
+            <li>Sal y pimienta al gusto</li>
+        </ol>
+        
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+            <li>Enjuaga la quinoa con agua fría para eliminar el amargor.</li>
+            <li>En una olla, hierve las 2 tazas de agua y añade la quinoa. Cocina a fuego lento durante 15 minutos o hasta que la quinoa esté tierna y haya absorbido toda el agua.</li>
+            <li>Deja enfriar la quinoa y colócala en un tazón grande.</li>
+            <li>Añade el pimiento rojo, el pepino y los tomates cherry al tazón con la quinoa.</li>
+            <li>En un tazón pequeño, mezcla el aceite de oliva, el jugo de limón, la sal y la pimienta. Vierte el aderezo sobre la ensalada y mezcla bien.</li>
+            <li>Sirve fría o a temperatura ambiente. ¡Disfruta de una ensalada fresca y nutritiva!</li>
+        </ol>
+        
+        <p><strong>Estimación de la subida de glucosa:</strong> Aproximadamente 25-35 mg/dL. La quinoa tiene un índice glucémico bajo, lo que ayuda a mantener estables los niveles de glucosa en sangre.</p>
+    </div>
+    
+    <div class="contenedorReceta">
+        <h2>Sopa de Lentejas</h2>
+        
+        <p><strong>Descripción:</strong> Esta sopa de lentejas es nutritiva y reconfortante. Es rica en proteínas y fibra, lo que la convierte en un excelente plato para mantener la saciedad y estabilizar los niveles de glucosa.</p>
+        
+        <p><strong>Porciones:</strong> 4 personas</p>
+        <p><strong>Tiempo de preparación:</strong> 10 minutos</p>
+        <p><strong>Tiempo de cocción:</strong> 30 minutos</p>
+        
+        <p><strong>Ingredientes:</strong></p>
+        <ol>
+            <li>1 taza de lentejas</li>
+            <li>4 tazas de caldo de verduras o agua</li>
+            <li>1 cebolla, picada</li>
+            <li>2 zanahorias, picadas</li>
+            <li>2 dientes de ajo, picados</li>
+            <li>1 hoja de laurel</li>
+            <li>1 cucharada de aceite de oliva</li>
+            <li>Sal y pimienta al gusto</li>
+            <li>Opcional: 1 cucharadita de comino</li>
+        </ol>
+        
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+            <li>En una olla grande, calienta el aceite de oliva a fuego medio. Agrega la cebolla y el ajo, y sofríe hasta que estén dorados.</li>
+            <li>Agrega las zanahorias y sofríe por 3-4 minutos más.</li>
+            <li>Incorpora las lentejas, el caldo (o agua), la hoja de laurel y el comino si lo deseas. Lleva a ebullición.</li>
+            <li>Reduce el fuego y cocina a fuego lento durante 25-30 minutos, o hasta que las lentejas estén tiernas.</li>
+            <li>Retira la hoja de laurel y sazona con sal y pimienta al gusto. Si lo prefieres, puedes hacer un puré parcial con un tenedor o una batidora para obtener una textura más cremosa.</li>
+            <li>Sirve caliente y disfruta de esta sopa nutritiva.</li>
+        </ol>
+        
+        <p><strong>Estimación de la subida de glucosa:</strong> Aproximadamente 30-45 mg/dL. Las lentejas son ricas en fibra y tienen un bajo índice glucémico, lo que ayuda a controlar los niveles de azúcar en sangre.</p>
+    </div>
+
+    <div class="contenedorReceta">
+        <h2>Pescado al Horno con Hierbas</h2>
+        
+        <p><strong>Descripción:</strong> Este pescado al horno es una opción ligera y deliciosa, ideal para una cena saludable. Las hierbas frescas y el limón realzan el sabor del pescado, mientras que los ácidos grasos omega-3 benefician la salud cardiovascular.</p>
+        
+        <p><strong>Porciones:</strong> 2 personas</p>
+        <p><strong>Tiempo de preparación:</strong> 10 minutos</p>
+        <p><strong>Tiempo de cocción:</strong> 20 minutos</p>
+        
+        <p><strong>Ingredientes:</strong></p>
+        <ol>
+            <li>2 filetes de pescado (salmón, merluza, o el que prefieras)</li>
+            <li>1 limón, en rodajas</li>
+            <li>2 cucharadas de aceite de oliva</li>
+            <li>1 cucharadita de orégano seco</li>
+            <li>1 cucharadita de tomillo seco</li>
+            <li>Sal y pimienta al gusto</li>
+            <li>Opcional: perejil fresco para decorar</li>
+        </ol>
+        
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+            <li>Precalienta el horno a 200°C (400°F).</li>
+            <li>En una bandeja para hornear, coloca los filetes de pescado y rocía con aceite de oliva.</li>
+            <li>Agrega las rodajas de limón sobre los filetes y espolvorea con orégano, tomillo, sal y pimienta.</li>
+            <li>Hornea durante 15-20 minutos, o hasta que el pescado se desmenuce fácilmente con un tenedor.</li>
+            <li>Retira del horno y decora con perejil fresco si lo deseas. Sirve caliente acompañado de tus vegetales favoritos.</li>
+        </ol>
+        
+        <p><strong>Estimación de la subida de glucosa:</strong> Aproximadamente 20-30 mg/dL. Este plato es bajo en carbohidratos y rico en proteínas, ayudando a mantener niveles estables de glucosa.</p>
+    </div>
+</div>
+    
+    
+</body>
+</html>

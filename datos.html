@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+    <script src="acciones.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes tipo 1</title>
+   
+</head>
+<body>
+    <h1>Asistente de Gestión de Diabetes Tipo 1</h1>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calculadoraHidratos.html">Calculadora de hidratos</a></li>
+        <li><a href="calculadora.html">Calculadora de raciones</a></li>
+        <li><a href="datos.html">Datos de hidratos</a></li>
+        <li><a href="desviacion.html">Desviación del sensor</a></li>
+        <li><a href="recetas.html">Recetas Saludables</a></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.className === "") {
+                menu.className = "show";
+            } else {
+                menu.className = "";
+            }
+        }
+    </script>
+    <div class="tabla-container">
+        <table class="leyenda">
+            <thead>
+                <tr>
+                    <th>Categoría</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Productos Lácteos</td>
+                    <td class="categoria1"></td>
+                </tr>
+                <tr>
+                    <td>Féculas</td>
+                    <td class="categoria2"></td>
+                </tr>
+                <tr>
+                    <td>Frutas</td>
+                    <td class="categoria3"></td>
+                </tr>
+                <tr>
+                    <td>Verduras y Hortalizas</td>
+                    <td class="categoria4"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alimento</th>
+                    <th>Una racion es:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="categoria1">Leche, entera, desnatada, semidesnatada.</td>
+                    <td>200ml</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Yogur natural</td>
+                    <td>2 Unidades</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Yogur Sabores</td>
+                    <td>0.6 Unidades</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Yogur desnatado</td>
+                    <td>Leer etiqueta</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Queso de burgos</td>
+                    <td>250gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Requesón</td>
+                    <td>Libre</td>
+                </tr>
+                <tr>
+                    <td class="categoria1">Quesitos, queso lonchas, otros.</td>
+                    <td>Libre</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Pan integral o blanco</td>
+                    <td>20gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Biscotes</td>
+                    <td>14gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Pan de Molde</td>
+                    <td>20gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Galletas Maria</td>
+                    <td>12gr/2 Unidades</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Conr-Flakes de Kellogs</td>
+                    <td>14gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Harina de Trigo</td>
+                    <td>12gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Rice-Crispis</td>
+                    <td>12gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Legumbres</td>
+                    <td>Cocidas: 50gr, <br> Crudas: 12gr.</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Pasta</td>
+                    <td>Cocidas: 50gr, <br> Crudas: 12gr.</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Patata</td>
+                    <td>Cocida: 50gr, <br>Frita: 35gr, <br>Chips: 15gr, <br>Cruda: 35gr.</td>
+                </tr>
+                <tr>
+                    <td class="categoria2">Arroz</td>
+                    <td>Cocida y lavada: 35gr, <br>En paella: 25gr, <br>Crudo: 12gr.</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Las mas habituales, manzana, pera...</td>
+                    <td>100gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Plátano, no maduro</td>
+                    <td>50gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Uvas, higos, chirimoyas</td>
+                    <td>50gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Sandía, melón</td>
+                    <td>150gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Fresa, fresón</td>
+                    <td>180gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Ciruelas, cerezas, nísperos, fresquillas, kiwi, piña</td>
+                    <td>70gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria3">Aguacate</td>
+                    <td>160gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Judías verdes, espinacas, acelgas, repollo, coliflor, brócoli, berenjena, calabacin, esparrago, cardo, puerro</td>
+                    <td>300gr, practicamente libre</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Lechuga, escarola, endivia, pepino crudo</td>
+                    <td>300gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Tomate, crudo y frito</td>
+                    <td>250gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Coles de Bruselas Cocidas</td>
+                    <td>200gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Setas, champiñón frito o asado</td>
+                    <td>175gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Alcachofa, frita o asada</td>
+                    <td>150gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Pimiento, crudo o asado</td>
+                    <td>150gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Zanahoria</td>
+                    <td>Cocida: 150gr, <br>Cruda: 100gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Cebolla, cruda, frita o asada</td>
+                    <td>100gr</td>
+                </tr>
+                <tr>
+                    <td class="categoria4">Remolacha, guisantes, habas-cocidos.</td>
+                    <td>100gr</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

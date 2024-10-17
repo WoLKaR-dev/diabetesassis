@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="acciones.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Diabetes tipo 1</title>
+</head>
+<body>
+    <h1>Asistente de Gestión de Diabetes Tipo 1</h1>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="calculadoraHidratos.html">Calculadora de hidratos</a></li>
+        <li><a href="calculadora.html">Calculadora de raciones</a></li>
+        <li><a href="datos.html">Datos de hidratos</a></li>
+        <li><a href="desviacion.html">Desviación del sensor</a></li>
+        <li><a href="recetas.html">Recetas Saludables</a></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.className === "") {
+                menu.className = "show";
+            } else {
+                menu.className = "";
+            }
+        }
+    </script>
+
+    <div class="container">
+        <label for="hidratos">Introduce la cantidad de alimento que vas a tomar en gramos: </label>
+        <br>
+        <input type="number" id="hidratos" name="hidratos">
+        <br>
+        <label for="cada100">Introduce la cantidad de hidratos en gramos por cada 100:</label>
+        <br>
+        <input type="number" id="cada100" name="cada100">
+        <br>
+        <button onclick="calcularRaciones()">Calcular</button>
+        <div id="resultado"></div> <!-- Div para mostrar el resultado -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
