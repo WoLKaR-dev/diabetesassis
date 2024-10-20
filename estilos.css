@@ -38,6 +38,17 @@
   src: url('Unbounded-Black.ttf') format('truetype');
 }
 
+ol{
+  text-align: left;
+  justify-content: left;
+  text-wrap: wrap;
+  margin: auto;
+  color: white;
+  font-family: Unbounded-Light;
+}
+ol li{
+  margin-bottom: 10px;
+}
 
 /* Nueva clase para el diseño de la cuadrícula */
 .grid-container {
@@ -59,9 +70,8 @@
 background-color: #131313;
 border-radius: 8px;
 }
-
-.contenedor h2{
-  background-color: rgb(61, 82, 213);
+.warningTitulo{
+  background-color: rgb(213, 61, 81);
   border-radius: 8px;
   color: #fff;
   text-align: center;
@@ -71,6 +81,18 @@ border-radius: 8px;
   display: flex;
   font-weight: bold;
 }
+.titulo{
+ background-color: rgb(61, 82, 213);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-family:'Unbounded-Light';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold; 
+}
+
 .contenedor p{
   text-align: center;
   font-family:'Unbounded-Light';
