@@ -69,6 +69,7 @@ ol li{
 .contenedor{
 background-color: #131313;
 border-radius: 8px;
+margin-top: 0px;
 }
 .warningTitulo{
   background-color: rgb(213, 61, 81);
@@ -91,6 +92,7 @@ border-radius: 8px;
   justify-content: center;
   display: flex;
   font-weight: bold; 
+  margin-top: 0px;
 }
 
 .contenedor p{
@@ -100,6 +102,7 @@ border-radius: 8px;
   margin-left: 5%;
   margin-right: 5%;
   margin-bottom: 5%;
+  margin-top: 0px;
 }
 
 
@@ -467,3 +470,10 @@ li a:hover {
   margin-bottom: 10px; /* Espacio entre el título y el contenido */
 }
 
+thead {
+  width: 100%;
+}
+
+thead th {
+  width: 25%;
+}
