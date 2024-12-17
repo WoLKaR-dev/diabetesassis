@@ -20,6 +20,7 @@ body {
     background: linear-gradient(to bottom, #0c101d, #222d4d) fixed; 
     background-repeat: no-repeat; 
     background-size: cover;
+    position: relative;
 }
 
 .sectionGeneral, h1{
@@ -70,6 +71,7 @@ body {
     border-radius: 50px;
     height: auto; /* Ajusta automáticamente según el contenido */
     min-height: 0; /* Permite que el contenido se expanda */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -95,6 +97,7 @@ body {
     align-items: center; /* Centra verticalmente el contenido */
     background-color: rgba(255, 255, 255, 0.1); /* Color de fondo para distinguir */
     border-radius: 30px; /* Bordes redondeados */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 }
 
@@ -106,6 +109,7 @@ body {
     align-items: center; /* Centra verticalmente el contenido */
     background-color: rgba(255, 255, 255, 0.1); /* Color de fondo para distinguir */
     border-radius: 30px; /* Bordes redondeados */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     
 }
 
@@ -154,6 +158,31 @@ body {
     aspect-ratio: 1 / 0,5625; 
     background-color: #3498db; 
     border-radius: 40px;
+}
+
+#qrCode img{
+    aspect-ratio: 1/1;
+    width: 90%;
+    margin: auto;
+    border-radius: 40px;
+}
+.invisible{
+    display: none;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 20%;
+    height: auto;
+    background-color: #222d4d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.visible{
+    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -210,5 +239,26 @@ body {
         width: 40%;
        margin-top: auto;
        font-size: 3vw;
+    }
+    #qrCode {
+        display: flex;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        width: 90%;
+        height: auto;
+        background-color: #222d4d;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+    #qrCode img{
+        aspect-ratio: 1/1;
+        width: 90%;
+        margin: auto;
+        border-radius: 40px;
     }
 }
