@@ -1,0 +1,214 @@
+/* Fuentes */
+@font-face {
+    font-family: 'MontserratBold';
+    src: url(Montserrat-SemiBold.ttf);
+}
+
+/* Estilos generales para pantallas pequeñas */
+/* Datos generales de la página */
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+
+body { 
+    min-height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    background: linear-gradient(to bottom, #0c101d, #222d4d) fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.sectionGeneral, h1{
+    margin: 60px;
+    margin-bottom: 20px;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    font-size: 35px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.sectionGeneral, h2{
+    margin: 60px;
+    margin-bottom: 20px;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    font-size: 30px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.sectionGeneral{
+    margin: auto;
+    width: 100%;
+    justify-content: left;
+    margin-bottom: 2%;
+}
+
+.grid-container {
+    width: 100%;
+    justify-content: center;
+    display: flex; 
+    gap: 20px; /* Espacio entre columnas */
+    align-items: stretch; 
+}
+
+.grid-item-left {
+    aspect-ratio: 1/1; /* Mantiene la relación de aspecto cuadrada */
+    width: 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f2ddcc; 
+    font-family: 'MontserratBold'; 
+    text-align: left; 
+    border-radius: 50px;
+    height: auto; /* Ajusta automáticamente según el contenido */
+    min-height: 0; /* Permite que el contenido se expanda */
+}
+
+
+
+.grid-item-right {
+    width: 20%; 
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    color: #f2ddcc; 
+    font-family: 'MontserratBold'; 
+    text-align: left; 
+    border-radius: 50px;
+    height: auto; /* Ajusta automáticamente según el contenido */
+    min-height: 0; /* Permite que el contenido se expanda */
+}
+
+.grid-item-right .sub-item2 {
+    flex: 1; /* Permite que ambos sub-elementos ocupen el mismo espacio */
+    display: flex;
+    margin-bottom: 2.5%;
+    justify-content: center; /* Centra el contenido dentro de cada sub-elemento */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo para distinguir */
+    border-radius: 30px; /* Bordes redondeados */
+    
+}
+
+.grid-item-right .sub-item {
+    margin-top: 2.5%;
+    flex: 1; /* Permite que ambos sub-elementos ocupen el mismo espacio */
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro de cada sub-elemento */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: rgba(255, 255, 255, 0.1); /* Color de fondo para distinguir */
+    border-radius: 30px; /* Bordes redondeados */
+    
+}
+
+.grid-item-right .sub-item p {
+    text-wrap: wrap;
+    display: flex;
+    align-self: flex-end;
+    width: 40%;
+   margin-top: auto;
+   font-size: 1vw;
+}
+
+.grid-item-right .sub-item2 p {
+    text-wrap: wrap;
+    display: flex;
+    align-self: flex-end;
+    width: 40%;
+   margin-top: auto;
+   font-size: 1vw;
+}
+
+
+.grid-item-right img.leftImg { 
+    margin-left: 10px;
+    width: 40%; 
+    height: auto;
+     aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 */ 
+     border-radius: 30px; 
+}
+
+.grid-item-left p, .grid-item-right p {
+    margin: 5%;
+    font-size: 1.5vw; /* Ajuste dinámico basado en el tamaño de la ventana */
+    line-height: 1.4; /* Mejorar la legibilidad */
+    max-width: 90%; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: normal;
+    flex-grow: 1; /* Permite que el párrafo se expanda según la altura disponible */
+}
+
+.bigImg {
+    margin-top: 2%;
+    width: 95%;
+    align-self: center;
+    aspect-ratio: 1 / 0,5625; 
+    background-color: #3498db; 
+    border-radius: 40px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        flex-direction: row; /* Mantiene las columnas en paralelo */
+        justify-content: center; /* Centra las columnas en el contenedor */
+        gap: 10px;
+    }
+
+    .grid-item-left, .grid-item-right {
+        width: 45%; 
+        border-radius: 30px;
+    }
+
+    .grid-item-left p, .grid-item-right p {
+        font-size: 3vw; /* Ajuste más pequeño para pantallas pequeñas */
+    }
+
+    .bigImg {
+        border-radius: 30px;
+    }
+
+    
+.grid-item-right img.leftImg { 
+    margin-left: 5px;
+    width: 40%; 
+    height: auto;
+     aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto 1:1 */ 
+     border-radius: 15px; 
+}
+
+    .grid-item-right .sub-item2 {
+        border-radius: 20px; /* Bordes redondeados */
+    }
+    
+    .grid-item-right .sub-item {
+        border-radius: 20px; /* Bordes redondeados */
+        margin-top: 2%;
+    }
+    
+    .grid-item-right .sub-item p {
+        text-wrap: wrap;
+        display: flex;
+        align-self: flex-end;
+        width: 40%;
+       margin-top: auto;
+       font-size: 3vw;
+    }
+    
+    .grid-item-right .sub-item2 p {
+        text-wrap: wrap;
+        display: flex;
+        align-self: flex-end;
+        width: 40%;
+       margin-top: auto;
+       font-size: 3vw;
+    }
+}
