@@ -8,12 +8,11 @@
 /* Datos generales de la página */
 
 html, body {
-    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    height: 100%; 
     margin: 0;
 }
 
-
-body { 
+.indexBody{
     min-height: 100%; 
     display: flex; 
     flex-direction: column; 
@@ -23,7 +22,8 @@ body {
     position: relative;
 }
 
-.sectionGeneral, h1{
+
+.indexSection, h1{
     margin: 60px;
     margin-bottom: 20px;
     font-family: 'MontserratBold';
@@ -33,7 +33,7 @@ body {
     text-align: center;
 }
 
-.sectionGeneral, h2{
+.indexSection, h2{
     margin: 60px;
     margin-bottom: 20px;
     font-family: 'MontserratBold';
@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 
-.sectionGeneral{
+.indexSection{
     margin: auto;
     width: 100%;
     justify-content: left;
@@ -247,5 +247,130 @@ body {
         width: 90%;
         margin: auto;
         border-radius: 40px;
+    }
+}
+
+/*======================================
+=======CALCULADORA DE HIDRATOS==============
+======================================*/
+.carboCalculatorBody {
+    min-height: 100%; 
+    background: linear-gradient(to bottom, #0c101d, #222d4d) fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+
+.carboCalculatorBody button {
+    aspect-ratio: 1920/720;
+    width: 5%;
+    margin: 1%;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #f2ddcc;
+    font-family: 'MontserratBold';
+    border: 2px solid #0c101d;
+    transition: border 0.3s ease-in-out;
+}
+
+.carboCalculatorContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carboCalculatorContainer div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    align-items: center;
+    padding: 20px;
+}
+
+.carboCalculatorContainer h1 {
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    font-size: 25px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.carboCalculatorContainer p {
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    text-align: center;
+}
+
+.carboCalculatorContainer input{
+    width: 10%; /* Aumenta el ancho del input */
+    padding: 15px; /* Ajusta el padding */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f2ddcc;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 12px;
+    font-size: 18px; 
+    box-sizing: border-box;
+    border: solid 2px ;
+    border-color: rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease-in-out, width 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Estilos para el input cuando está enfocado */
+.carboCalculatorContainer input:focus {
+    border-color:  #f2ddcc;
+    outline: none; 
+    width: 25%;
+}
+
+#calculatePortionsButton{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 15%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#calculatePortionsButton:hover{
+    border-color: #f2ddcc;
+}
+
+.carboCalculatorBody button:hover{
+    border: 1px solid #f2ddcc;
+}
+
+
+
+@media (max-width: 768px) {
+    .carboCalculatorContainer div {
+        width: 85%;
+    }
+    .carboCalculatorContainer input{
+        width: 25%; /* Aumenta el ancho del input */
+    }
+    .carboCalculatorContainer input:focus {
+        width: 50%;
+    }
+    #calculatePortionsButton{
+        aspect-ratio: 1920/1080;
+        width: 35%;
+        height: auto;
+        font-size: 1.5vh;
+        word-wrap: normal;
+    }
+    .carboCalculatorBody button {
+        width: 25%;
+        border-radius: 10px;
     }
 }
