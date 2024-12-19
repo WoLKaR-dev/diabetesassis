@@ -100,75 +100,75 @@ const tablaDeValores = {
   
   // JavaScript para la calculadora
   document.addEventListener("DOMContentLoaded", function() {
-    const opcion1 = document.getElementById("opcion1");
-    const opcion2 = document.getElementById("opcion2");
-    const tabla = document.getElementById("tablaCalculadora").querySelector("tbody");
+    const opcion1 = document.getElementById("selectIngredient");
+    const opcion2 = document.getElementById("menuMakerQuantity");
+    const tabla = document.getElementById("calculatorTable").querySelector("tbody");
     const agregarFilaBtn = document.getElementById("agregarFila");
     const eliminarFilaBtn = document.getElementById("eliminarFila");
     const sumaTotal = document.getElementById("sumaTotal");
   
     opcion1.addEventListener("change", function() {
-      calcularResultado();
+        calcularResultado();
     });
   
     opcion2.addEventListener("input", function() {
-      calcularResultado();
+        calcularResultado();
     });
   
     agregarFilaBtn.addEventListener("click", function() {
-      agregarFila();
+        agregarFila();
     });
   
     eliminarFilaBtn.addEventListener("click", function() {
-      eliminarFila();
+        eliminarFila();
     });
   
     function calcularResultado() {
-      const resultado = (opcion1.value in tablaDeValores && typeof tablaDeValores[opcion1.value] === "number") ? opcion2.value / tablaDeValores[opcion1.value] : "No definido";
-      return resultado;
+        const resultado = (opcion1.value in tablaDeValores && typeof tablaDeValores[opcion1.value] === "number") ? opcion2.value / tablaDeValores[opcion1.value] : "No definido";
+        return resultado !== "No definido" ? parseFloat(resultado).toFixed(2) : resultado;
     }
   
     function agregarFila() {
-      const fila = document.createElement("tr");
-      const tdOpcion1 = document.createElement("td");
-      const tdOpcion2 = document.createElement("td");
-      const tdResultado = document.createElement("td");
+        const fila = document.createElement("tr");
+        const tdOpcion1 = document.createElement("td");
+        const tdOpcion2 = document.createElement("td");
+        const tdResultado = document.createElement("td");
   
-      tdOpcion1.textContent = opcion1.value;
-      tdOpcion2.textContent = opcion2.value;
-      tdResultado.textContent = calcularResultado();
+        tdOpcion1.textContent = opcion1.value;
+        tdOpcion2.textContent = opcion2.value;
+        tdResultado.textContent = calcularResultado();
   
-      fila.appendChild(tdOpcion1);
-      fila.appendChild(tdOpcion2);
-      fila.appendChild(tdResultado);
+        fila.appendChild(tdOpcion1);
+        fila.appendChild(tdOpcion2);
+        fila.appendChild(tdResultado);
   
-      tabla.appendChild(fila);
+        tabla.appendChild(fila);
   
-      // Actualizar la suma total
-      actualizarSumaTotal();
+        // Actualizar la suma total
+        actualizarSumaTotal();
     }
   
     function eliminarFila() {
-      const filas = tabla.querySelectorAll("tr");
-      if (filas.length > 0) {
-        tabla.removeChild(filas[filas.length - 1]);
-        // Actualizar la suma total después de eliminar la fila
-        actualizarSumaTotal();
-      }
+        const filas = tabla.querySelectorAll("tr");
+        if (filas.length > 0) {
+            tabla.removeChild(filas[filas.length - 1]);
+            // Actualizar la suma total después de eliminar la fila
+            actualizarSumaTotal();
+        }
     }
   
     function actualizarSumaTotal() {
-      let suma = 0;
-      const filas = tabla.querySelectorAll("tr");
-      filas.forEach(fila => {
-        const resultado = parseFloat(fila.querySelector("td:last-child").textContent);
-        if (!isNaN(resultado)) {
-          suma += resultado;
-        }
-      });
+        let suma = 0;
+        const filas = tabla.querySelectorAll("tr");
+        filas.forEach(fila => {
+            const resultado = parseFloat(fila.querySelector("td:last-child").textContent);
+            if (!isNaN(resultado)) {
+                suma += resultado;
+            }
+        });
   
-      sumaTotal.textContent = "Suma total de raciones: " + suma +" raciones";
+        sumaTotal.textContent = "Suma total de raciones: " + suma.toFixed(2) + " raciones";
     }
-  });
-  
+});
+
   
