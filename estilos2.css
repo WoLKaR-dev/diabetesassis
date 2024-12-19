@@ -4,6 +4,11 @@
     src: url(Montserrat-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url(Montserrat-Medium.ttf);
+}
+
 /* Estilos generales para pantallas pequeñas */
 /* Datos generales de la página */
 
@@ -372,5 +377,236 @@ html, body {
     .carboCalculatorBody button {
         width: 25%;
         border-radius: 10px;
+    }
+}
+/*======================================
+=======CALCULADORA DE RACIONES==============
+======================================*/
+.menuCalculatorBody {
+    min-height: 100%; 
+    background: linear-gradient(to bottom, #0c101d, #222d4d) fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.menuCalculatorContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.menuCalculatorContainerDiv {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    align-items: center;
+    padding: 20px;
+}
+
+.menuCalculatorContainer p {
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    text-align: center;
+}
+
+.menuCalculatorBody button {
+    aspect-ratio: 1920/720;
+    width: 5%;
+    margin: 1%;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    color: #f2ddcc;
+    font-family: 'MontserratBold';
+    border: 2px solid #0c101d;
+    transition: border 0.3s ease-in-out;
+}
+
+#selectIngredient{
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    text-align: center;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    height: 3vh;
+}
+ .menuCalculatorContainer label{
+    margin-top: 20px;
+    font-family: 'MontserratMedium';
+    color: #f2ddcc;
+    border-color:  #f2ddcc;
+    outline: none; 
+ }
+ .menuCalculatorContainer select{
+    outline: none;
+    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }  
+
+ .ingredientOption{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #222d4d;
+    font-family: 'MontserratBold';
+ }
+
+ .menuCalculatorContainer h2{
+    margin-top: 10px;
+    font-size: 1.5vw;
+ }
+ .menuCalculatorContainer h3{
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    margin-top: 5px;
+    font-size: 1vw;
+ }
+
+ .menuCalculatorContainer li{
+    font-family: 'MontserratMedium';
+    color: #f2ddcc;
+    word-wrap: wrap;
+ }
+
+ #menuMakerQuantity{
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+    text-align: center;
+    outline: none;
+    width: 10%;
+    height: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: border-color 0.3s ease-in-out, width 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#menuMakerQuantity:focus{
+    border-color:  #f2ddcc;
+    outline: none; 
+    width: 35%;
+}
+
+.menuMakerButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.menuMakerButtons button {
+    border-color: rgba(255,255,255,0.1);
+    width: 40%;
+    margin: 7px;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 45px;
+}
+
+#calculatorTable{
+    margin-top: 20px;
+    width: 80%;
+    border-collapse: collapse;
+
+}
+
+#calculatorTable thead{
+    height: 35px;
+    font-family: 'MontserratMedium';
+    color: #f2ddcc;
+    font-size: 0.75vw;
+    table-layout: auto;
+}
+
+.topLeftCalculatorTable{
+    border-top-left-radius: 10px;
+}
+
+#calculatorTable th{
+    outline: 1px solid #f2ddcc1a;
+    background-color: #171E32;
+}
+
+.topRightCalculatorTable{
+    border-top-right-radius: 10px;
+}
+
+#calculatorTable tbody{
+    background-color: #0C101B;
+    font-family: 'MontserratMedium';
+    color: #f2ddcc;
+    font-size: 0.75vw;
+    word-wrap: break-word;
+    line-height: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#calculatorTable td{
+    outline: 1px solid #f2ddcc1a;
+    text-align: center;
+    width: 33%;
+}
+
+@media (max-width: 768px){
+    .menuCalculatorBody button {
+        width: 25%;
+        border-radius: 10px;
+    }
+    .menuCalculatorContainerDiv {
+        width: 85%;
+    }
+    .menuCalculatorContainer h2{
+        margin-top: 10px;
+        font-size: 7vw;
+    }
+     .menuCalculatorContainer h3{
+        font-family: 'MontserratBold';
+        color: #f2ddcc;
+        margin-top: 5px;
+        font-size: 5vw;
+     }
+
+     #menuMakerQuantity{
+        width: 25%;
+        
+    }
+    #menuMakerQuantity:focus{
+        border-color:  #f2ddcc;
+        outline: none; 
+        width: 50%;
+    }
+    .menuMakerButtons button {
+        width: 60%;
+    }
+    #calculatorTable thead{
+        font-size: 4vw;
+
+    }
+    #calculatorTable tbody{
+        font-size:3vw;
+        word-wrap: normal;
+        line-height: 30px;
+    }
+    #calculatorTable{
+        width: 90%;
+    }
+    .ingredientOption{
+        word-wrap: normal;
+    }
+    .topLeftCalculatorTable{
+        border-top-left-radius: 10px;
+    }
+    .topRightCalculatorTable{
+        border-top-right-radius: 10px;
     }
 }
