@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Assistance</title>
+  <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
+  <link rel="stylesheet" href="estilos2.css">
+</head>
+
+<body class="menuCalculatorBody">
+
+<button onclick="window.location.href = 'index.html';">Regresar</button>
+<div class="menuCalculatorContainer" >
+
+  <h1>Planificador de Menús Diabéticos</h1>
+
+    <div class="menuCalculatorContainerDiv">
+    <h2>Instrucciones</h2>
+
+    <h3>Tipo de alimento y cantidad:</h3>
+    <ul>
+     <li>Introduce el tipo de alimento que deseas agregar.</li>
+      <li>Indica la cantidad correspondiente en mililitros (ml), gramos (gr) o unidades según sea apropiado para el alimento.</li>
+    </ul>
+
+    <h3>Añadir al menú:</h3>
+    <ul>
+     <li>Pulsa en "Añadir fila" para incluir el alimento con su cantidad en tu menú.</li>
+    </ul>
+
+    <h3>Eliminar filas:</h3>
+    <ul>
+      <li>Usa la opción "Eliminar filas" para borrar la opción más reciente que hayas añadido a tu menú.</li>
+    </ul>
+
+    <h3>Yogures y galletas:</h3>
+    <ul>
+      <li>Yogures: Deben ser ingresados utilizando puntos para las fracciones. Por ejemplo, si tienes medio yogur, debes poner "0.5".</li>
+      <li>Galletas: Deben ser ingresadas en gramos.</li>
+   </ul>
+
+    <h3>Alimentos libres:</h3>
+    <ul>
+      <li>Los alimentos que son considerados "libres" no aparecerán en la lista.</li>
+    </ul>
+  </div>
+
+  <div class="menuCalculatorContainerDiv">
+    <h2>Planificador de Menús Diabéticos</h2>
+
+    <label for="selectIngredient">Tipo de alimento:</label>
+    <select id="selectIngredient">
+      <option value="Leche, entera, desnatada, semidesnatada" class="ingredientOption">Leche, entera, desnatada, semidesnatada</option>
+      <option value="Yogur natural"class="ingredientOption">Yogur natural</option>
+      <option value="Yogur Sabores"class="ingredientOption">Yogur Sabores</option>
+      <option value="Queso de burgos"class="ingredientOption">Queso de burgos</option>
+      <option value="Pan integral o blanco"class="ingredientOption">Pan integral o blanco</option>
+      <option value="Biscotes"class="ingredientOption">Biscotes</option>
+      <option value="Pan de Molde"class="ingredientOption">Pan de Molde</option>
+      <option value="Galletas Maria"class="ingredientOption">Galletas Maria</option>
+      <option value="Conr-Flakes de Kellogs"class="ingredientOption">Conr-Flakes de Kellogs</option>
+      <option value="Harina de Trigo"class="ingredientOption">Harina de Trigo</option>
+      <option value="Rice-Crispis"class="ingredientOption">Rice-Crispis</option>
+      <option value="Legumbres Cocidas"class="ingredientOption">Legumbres Cocidas</option>
+      <option value="Legumbre Cruda"class="ingredientOption">Legumbre Cruda</option>
+      <option value="Pasta Cocida"class="ingredientOption">Pasta Cocida</option>
+      <option value="Pasta Cruda"class="ingredientOption">Pasta Cruda</option>
+      <option value="Patata Cocida"class="ingredientOption">Patata Cocida</option>
+      <option value="Patata Frita"class="ingredientOption">Patata Frita</option>
+      <option value="Patata Chips"class="ingredientOption">Patata Chips</option>
+      <option value="Patata Cruda"class="ingredientOption">Patata Cruda</option>
+      <option value="Arroz Cocida y lavada"class="ingredientOption">Arroz Cocida y lavada</option>
+      <option value="Arroz en paella"class="ingredientOption">Arroz en paella</option>
+      <option value="Arroz cruda"class="ingredientOption">Arroz cruda</option>
+      <option value="Las mas habituales, manzana, pera..."class="ingredientOption">Las mas habituales, manzana, pera...</option>
+      <option value="Plátano, no maduro"class="ingredientOption">Plátano, no maduro</option>
+      <option value="Uvas, higos, chirimoyas"class="ingredientOption">Uvas, higos, chirimoyas</option>
+      <option value="Sandía, melón"class="ingredientOption">Sandía, melón</option>
+      <option value="Fresa, fresón"class="ingredientOption">Fresa, fresón</option>
+      <option value="Ciruelas, cerezas, nísperos, fresquillas, kiwi, piña"class="ingredientOption">Ciruelas, cerezas, nísperos, fresquillas, kiwi, piña</option>
+      <option value="Aguacate"class="ingredientOption">Aguacate</option>
+      <option value="Judías verdes, espinacas, acelgas, repollo, coliflor, brócoli, berenjena, calabacin, esparrago, cardo, puerro"class="ingredientOption">Judías verdes, espinacas, acelgas, repollo, coliflor, brócoli, berenjena, calabacin, esparrago, cardo, puerro</option>
+      <option value="Lechuga, escarola, endivia, pepino crudo"class="ingredientOption">Lechuga, escarola, endivia, pepino crudo</option>
+      <option value="Tomate, crudo y frito"class="ingredientOption">Tomate, crudo y frito</option>
+      <option value="Coles de Bruselas Cocidas"class="ingredientOption">Coles de Bruselas Cocidas</option>
+      <option value="Setas, champiñón frito o asado"class="ingredientOption">Setas, champiñón frito o asado</option>
+      <option value="Alcachofa, frita o asada"class="ingredientOption">Alcachofa, frita o asada</option>
+      <option value="Pimiento, crudo o asado"class="ingredientOption">Pimiento, crudo o asado</option>
+      <option value="Zanahoria Cocida"class="ingredientOption">Zanahoria Cocida</option>
+      <option value="Zanahoria Cruda"class="ingredientOption">Zanahoria Cruda</option>
+      <option value="Cebolla, cruda, frita o asada"class="ingredientOption">Cebolla, cruda, frita o asada</option>
+      <option value="Remolacha, guisantes, habas-cocidos."class="ingredientOption">Remolacha, guisantes, habas-cocidos.</option>
+    </select>
+  
+  <label for="menuMakerQuantity" >Cantidad, en ml, gr o unidades según el alimento:</label>
+  <input type="number" id="menuMakerQuantity" min="0">
+  
+  <div class="menuMakerButtons">
+    <button id="agregarFila">Agregar Fila</button>
+    <button id="eliminarFila">Eliminar Fila</button>
+  </div>
+
+
+  <table id="calculatorTable">
+  <thead>
+  <tr>
+  <th class="topLeftCalculatorTable">Alimento</th>
+  <th>Cantidad</th>
+  <th class="topRightCalculatorTable">Raciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+
+  <p id="sumaTotal" class="parrafo">Suma total de raciones: 0 raciones</p>
+  <script src="acciones.js"></script>
+</div>
+</body>
+<br></br>
+</html>
