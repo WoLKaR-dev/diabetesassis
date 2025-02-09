@@ -1,0 +1,65 @@
+/* Fuentes */
+@font-face {
+    font-family: 'MontserratBold';
+    src: url(Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url(Montserrat-Medium.ttf);
+}
+
+/*Diseño Clásico*/
+html, body {
+    height: 100%; 
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+body{
+    background: linear-gradient(to bottom, #0c101d, #222d4d) fixed; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.classicH1{
+    text-align: center;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+}
+
+.classicH2{
+    text-align: center;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+}
+
+.classicH3{
+    text-align: center;
+    font-family: 'MontserratBold';
+    color: #f2ddcc;
+}
+
+.classicDiv{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    border-radius: 5vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.classicParagraph{
+    color: #f2ddcc;
+    font-family: 'MontserratBold';
+    text-align: center;
+    word-wrap: break-word;
+}
+
+
+
+
+
+

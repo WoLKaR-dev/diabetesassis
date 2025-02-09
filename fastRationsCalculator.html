@@ -3,26 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="acciones.js"></script>
+    <script src="fastRationsCalculatorHandler.js"></script>
     <link rel="stylesheet" href="estilos2.css">
     <title>Diabetes Assistance</title>
     <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
 </head>
 <body class="carboCalculatorBody">
-    <button onclick="window.location.href = 'index.html';">Regresar</button>
+    <button class="returnButton" onclick="window.location.href = 'index.html';">Regresar</button>
     <h2>Calculadora de Raciones</h2>
+    <div class="modeSelect">
+        <button id = 'simpleCalculatorButton' onclick="showSimpleCalculator()">Simple</button>
+        <button id = 'advancedCalculatorButton' onclick="showAdvancedCalculator()">Avanzado</button>
+    </div>
     <div class="carboCalculatorContainer">
-        <div>
-            <h1>Introduce tus datos</h1>
+
+        <div id = 'simpleCalculatorMode'>
+            <h1>Introduce tus datos2</h1>
             <p>Introduce la cantidad de alimento que vas a tomar en gramos: </p>
-            <input type="number" id="hidratos">
+            <input type="number" id="simpleFoodAmount">
             <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
-            <input type="number" id="cada100">
-            <button id="calculatePortionsButton" onclick="calcularRaciones()">Calcular raciones</button>
+            <input type="number" id="simpleEach100">
+            <button id="calculateSimplePortion" onclick="calculateSimpleRations()">Calcular</button>
             <p id="resultado"></p>
         </div>
+
+        <div id = 'advancedCalculatorMode'>
+            <h1>Crea tu menú a partir de tus datos.</h1>
+            <p>Introduce las cantidades de alimentos que vas a comer. Nosotros nos encargamos de sumarlo por ti. </p>
+            <p>Introduce la cantidad de alimento que vas a tomar en gramos: </p>
+            <input type="number" id="advancedFoodAmount">
+            <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
+            <input type="number" id="advancedEach100">
+            <button class = "advancedCalculatorButton" onclick="agregarFila()">Agregar Fila</button>
+            <button onclick="eliminarFila()">Eliminar Fila</button>
+
+            <p id = "sumaTotal">Suma total: </p>
+            <table id = "advancedCalculator">
+                <thead>
+                    <th>Cantidades</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
     </div>
     
-    <script src="script.js"></script>
 </body>
 </html>

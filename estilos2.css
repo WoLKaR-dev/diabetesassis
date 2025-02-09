@@ -270,10 +270,23 @@ html, body {
 }
 
 
+#simpleCalculatorButton{
+    aspect-ratio: 1920/720;
+    color: #f2ddcc;
+    width: 10%;
+    margin-bottom: 0px;
+}
+
+#advancedCalculatorButton{
+    aspect-ratio: 1920/720;
+    color: #f2ddcc;
+    width: 10%;
+    margin-bottom: 10px;
+}
 
 .carboCalculatorBody button {
     aspect-ratio: 1920/720;
-    width: 5%;
+    width: 15%;
     margin: 1%;
     margin-bottom: 0px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -288,6 +301,7 @@ html, body {
 .carboCalculatorContainer {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -341,23 +355,42 @@ html, body {
     width: 25%;
 }
 
-#calculatePortionsButton{
-    margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 15%;
-    padding: 10px;
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: border-color 0.3s ease-in-out;
-}
-
-#calculatePortionsButton:hover{
-    border-color: #f2ddcc;
-}
 
 .carboCalculatorBody button:hover{
     border: 1px solid #f2ddcc;
 }
+
+.modeSelect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#advancedCalculatorMode{
+    display: none;
+    border-collapse: collapse;
+}
+
+#advancedCalculatorMode th{
+    background-color: #171E32;
+    width: 20%;
+    padding: 2.5%;
+    font-family: 'MontserratMedium';
+    color: #f2ddcc;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;   
+}
+
+#advancedCalculatorMode td{
+    background-color: #f2ddcc;
+    color: #0C101B;
+    font-family: 'MontserratMedium';
+    padding: 1.5%;
+    text-align: center;
+}
+
 
 
 
@@ -371,17 +404,25 @@ html, body {
     .carboCalculatorContainer input:focus {
         width: 50%;
     }
-    #calculatePortionsButton{
-        aspect-ratio: 1920/1080;
-        width: 35%;
-        height: auto;
-        font-size: 1.5vh;
-        word-wrap: normal;
-    }
+
     .carboCalculatorBody button {
         width: 25%;
         border-radius: 10px;
     }
+    #simpleCalculatorButton{
+        aspect-ratio: 1920/720;
+        color: #f2ddcc;
+        width: 30%;
+        margin-bottom: 0px;
+    }
+    
+    #advancedCalculatorButton{
+        aspect-ratio: 1920/720;
+        color: #f2ddcc;
+        width: 30%;
+        margin-bottom: 10px;
+    }
+
 }
 /*======================================
 =======CALCULADORA DE RACIONES==============

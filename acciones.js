@@ -15,24 +15,6 @@ function calcularRaciones() {
   document.getElementById('resultado').innerText = "Raciones calculadas: " + raciones.toFixed(2);
 }
 
-function corregirGlucosa() {
-    // Obtener el valor de la glucosa del input
-    const nivelGlucosa = parseFloat(document.getElementById('glucosa').value);
-
-    // Aplicar la regla de tres para calcular la corrección
-    let glucosaCorregida;
-    let diferencia;
-    if (nivelGlucosa <= 50) {
-        glucosaCorregida = nivelGlucosa;
-        alert(`Nivel real de glucosa: ${glucosaCorregida}`);
-    } else {
-        glucosaCorregida = nivelGlucosa - 50;
-        glucosaCorregida = (glucosaCorregida * 70) / 170;
-        diferencia = nivelGlucosa - glucosaCorregida;
-        alert(`Nivel real de glucosa: ${diferencia}`);
-    }
-
-}
 
 // JavaScript para añadir interactividad al formulario
 document.addEventListener("DOMContentLoaded", function() {
