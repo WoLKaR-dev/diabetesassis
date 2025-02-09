@@ -18,11 +18,12 @@
     <div class="carboCalculatorContainer">
 
         <div id = 'simpleCalculatorMode'>
-            <h1>Introduce tus datos2</h1>
+            <h1>Introduce tus datos</h1>
             <p>Introduce la cantidad de alimento que vas a tomar en gramos: </p>
             <input type="number" id="simpleFoodAmount">
             <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
             <input type="number" id="simpleEach100">
+            <br>
             <button id="calculateSimplePortion" onclick="calculateSimpleRations()">Calcular</button>
             <p id="resultado"></p>
         </div>
@@ -34,6 +35,7 @@
             <input type="number" id="advancedFoodAmount">
             <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
             <input type="number" id="advancedEach100">
+            <br>
             <button class = "advancedCalculatorButton" onclick="agregarFila()">Agregar Fila</button>
             <button onclick="eliminarFila()">Eliminar Fila</button>
 
