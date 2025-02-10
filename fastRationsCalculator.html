@@ -1,55 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="fastRationsCalculatorHandler.js"></script>
-    <link rel="stylesheet" href="estilos2.css">
-    <title>Diabetes Assistance</title>
-    <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
+    <title>Calculadora de Raciones</title>
+    <link rel="stylesheet" href="stylesHandler.css">
+    <script src="rationsCalculator.js"></script>
 </head>
-<body class="carboCalculatorBody">
-    <button class="returnButton" onclick="window.location.href = 'index.html';">Regresar</button>
-    <h2>Calculadora de Raciones</h2>
-    <div class="modeSelect">
-        <button id = 'simpleCalculatorButton' onclick="showSimpleCalculator()">Simple</button>
-        <button id = 'advancedCalculatorButton' onclick="showAdvancedCalculator()">Avanzado</button>
-    </div>
-    <div class="carboCalculatorContainer">
-
-        <div id = 'simpleCalculatorMode'>
-            <h1>Introduce tus datos</h1>
-            <p>Introduce la cantidad de alimento que vas a tomar en gramos: </p>
-            <input type="number" id="simpleFoodAmount">
-            <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
-            <input type="number" id="simpleEach100">
-            <br>
-            <button id="calculateSimplePortion" onclick="calculateSimpleRations()">Calcular</button>
-            <p id="resultado"></p>
-        </div>
-
-        <div id = 'advancedCalculatorMode'>
-            <h1>Crea tu menú a partir de tus datos.</h1>
-            <p>Introduce las cantidades de alimentos que vas a comer. Nosotros nos encargamos de sumarlo por ti. </p>
-            <p>Introduce la cantidad de alimento que vas a tomar en gramos: </p>
-            <input type="number" id="advancedFoodAmount">
-            <p>Introduce la cantidad de hidratos en gramos por cada 100:</p>
-            <input type="number" id="advancedEach100">
-            <br>
-            <button class = "advancedCalculatorButton" onclick="agregarFila()">Agregar Fila</button>
-            <button onclick="eliminarFila()">Eliminar Fila</button>
-
-            <p id = "sumaTotal">Suma total: </p>
-            <table id = "advancedCalculator">
-                <thead>
-                    <th>Cantidades</th>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
+<body>
     
+
+    <h1 class="classicH1">Calculadora de Raciones</h1>
+     <div class="classicDiv">
+        <h3 class="classicH3">¿Que calculadora buscas?</h3>
+        <div style="width: 100%; display: flex; justify-content: center; align-self: center; gap: 5px;">
+            <button class="classicButton" onclick="showCalculator('simple')">Simple</button>
+            <button class="classicButton" onclick="showCalculator('advanced')">Avanzada</button>
+        </div> 
+    </div>
+
+    <div class="classicDiv" id = "simpleCalculator">
+        <h2 class="classicH2">Introduce tus datos</h2>
+        <p class="classicParagraph"> Introduce la cantidad de alimento que planeas comer: </p>
+        <input type="number" class="classicInput" id = 'simpleFoodAmount'>
+        <p class="classicParagraph"> Introduce la cantidad de hidratos en gramos por cada 100: </p>
+        <input type="number" class="classicInput" id = 'simpleEach100'>
+        <button class="classicButton" onclick="simpleCalc()">Calcular</button>
+        <p class="classicParagraph" id = 'finalResult'>Raciones calculadas: 0</p>
+    </div>
+
+    <div class="classicDiv" id = "advancedCalculator" style="display: none;" >
+        <h2 class="classicH2"> Calculadora Avanzada </h2>
+        <p class="classicParagraph">Introduce las cantidades de los elementos que vas a comer Nosotros nos encargamos de sumarlo por ti.</p>
+        <p class="classicParagraph">Introduce la cantidad de alimento que vas a comer:</p>
+        <input type="number" class="classicInput" id = 'advancedFoodAmount'>
+        <p class="classicParagraph">Introduce la cantidad de hidratos en gramos por cada 100:</p>
+        <input type="number" class="classicInput" id = 'advancedEach100'>
+        <p class="classicParagraph">Introduce el nombre del alimento que vas a comer (puedes dejarlo en blanco si es irrelevante):</p>
+        <input type="text" class="classicInput" style="font-size: 2vh;" id = "foodName">
+        <div style="display: flex; justify-content: center; width: 100%; gap: 5px;">
+            <button class="classicButton" onclick="agregarFila()">Añadir Fila</button>
+            <button class="classicButton" onclick="eliminarFila()">Eliminar Fila</button>
+        </div>
+        <p class="classicParagraph" id = 'sumaTotal'>Suma total de raciones: 0</p>
+        <table class="classicTable" id = 'foodTable'>
+            <thead>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Raciones</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <button class="classicButton" onclick="window.location.href = 'index.html';">Regresar</button>
+
 </body>
 </html>
