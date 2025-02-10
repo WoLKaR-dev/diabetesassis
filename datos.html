@@ -2,74 +2,20 @@
 <html lang="es">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
-    <script src="acciones.js"></script>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="stylesHandler.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Assistance</title>
     <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Asistente de Gestión de Diabetes Tipo 1</h1>
-
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-    <ul id="menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="fastRationsCalculator.html">Calculadora de hidratos</a></li>
-        <li><a href="diabeticMenuMaker.html">Planificador de Menú para Diabéticos</a></li>
-        <li><a href="datos.html">Datos de hidratos</a></li>
-        <li><a href="recetas.html">Recetas Saludables</a></li>
-        <li><a href="diagnostico.html">Diagnóstico</a></li>
-    </ul>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.className === "") {
-                menu.className = "show";
-            } else {
-                menu.className = "";
-            }
-        }
-    </script>
-    <div class="tabla-container">
-        <table class="leyenda">
+    <h1 class="classicH1">Raciones por Alimento</h1>
+    <div class="classicDiv">
+        <table class="classicTable">
             <thead>
                 <tr>
-                    <th>Categoría</th>
-                    <th>Color</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Productos Lácteos</td>
-                    <td class="categoria1"></td>
-                </tr>
-                <tr>
-                    <td>Féculas</td>
-                    <td class="categoria2"></td>
-                </tr>
-                <tr>
-                    <td>Frutas</td>
-                    <td class="categoria3"></td>
-                </tr>
-                <tr>
-                    <td>Verduras y Hortalizas</td>
-                    <td class="categoria4"></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <table>
-            <thead>
-                <tr>
-                    <th>Alimento</th>
-                    <th>Una racion es:</th>
+                    <td>Alimento</td>
+                    <td>Una racion es:</td>
                 </tr>
             </thead>
             <tbody>
@@ -216,5 +162,7 @@
             </tbody>
         </table>
     </div>
+
+    <button class="classicButton" onclick="window.location.href = 'index.html';">Regresar</button>
 </body>
 </html>
