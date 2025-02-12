@@ -4,61 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diabetes Assistance</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="stylesHandler.css">
   <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>Asistente de Gestión de Diabetes Tipo 1</h1>
+<div class="classicDiv">
+    <h2 class="classicH2">Diagnóstico de Diabetes</h2>
+    <p class="classicParagraph">Conoce más sobre la diabetes, sus tipos, síntomas, y los criterios que los médicos utilizan para diagnosticarla.</p>
 
-  <div class="menu-icon" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-  </div>
+    <h2 class="classicH2">¿Qué es la diabetes?</h2>
+    <p class="classicParagraph">La diabetes es una enfermedad crónica que afecta la capacidad del cuerpo para procesar la glucosa en sangre. Dependiendo del tipo de diabetes, el cuerpo puede no producir insulina o no usarla de manera eficiente.</p>
 
-  <ul id="menu">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="fastRationsCalculator.html">Calculadora de hidratos</a></li>
-      <li><a href="diabeticMenuMaker.html">Planificador de Menú para Diabéticos</a></li>
-      <li><a href="datos.html">Datos de hidratos</a></li>
-      <li><a href="recetas.html">Recetas Saludables</a></li>
-      <li><a href="diagnostico.html">Diagnóstico</a></li>
-  </ul>
-
-  <script>
-      function toggleMenu() {
-          var menu = document.getElementById("menu");
-          if (menu.className === "") {
-              menu.className = "show";
-          } else {
-              menu.className = "";
-          }
-      }
-  </script>
-<div class="contenedor">
-    <h2 class="titulo">Diagnóstico de Diabetes</h2>
-    <p>Conoce más sobre la diabetes, sus tipos, síntomas, y los criterios que los médicos utilizan para diagnosticarla.</p>
-
-    <h2 class="titulo">¿Qué es la diabetes?</h2>
-    <p>La diabetes es una enfermedad crónica que afecta la capacidad del cuerpo para procesar la glucosa en sangre. Dependiendo del tipo de diabetes, el cuerpo puede no producir insulina o no usarla de manera eficiente.</p>
-
-    <h2 class="titulo">Tipos de diabetes</h2>
-    <ol>
+    <h2 class="classicH2">Tipos de diabetes</h2>
+    <ol class="classicList">
         <li><strong>Diabetes tipo 1:</strong> Se produce cuando el sistema inmunológico destruye las células del páncreas que producen insulina.</li>
         <li><strong>Diabetes tipo 2:</strong> Ocurre cuando el cuerpo se vuelve resistente a la insulina o no produce suficiente.</li>
         <li><strong>Diabetes gestacional:</strong> Se desarrolla durante el embarazo y generalmente desaparece después del parto, aunque puede aumentar el riesgo de desarrollar diabetes tipo 2 más adelante.</li>
     </ol>
 
-    <h2 class="titulo">Criterios de diagnóstico</h2>
-    <p>Para diagnosticar la diabetes, se realizan pruebas específicas. Los resultados que indican diabetes son:</p>
+    <h2 class="classicH2">Criterios de diagnóstico</h2>
+    <p class="classicParagraph">Para diagnosticar la diabetes, se realizan pruebas específicas. Los resultados que indican diabetes son:</p>
     
-    <table>
+    <table class="classicTable">
         <thead>
             <tr>
-                <th>Prueba</th>
-                <th>Resultado Normal</th>
-                <th>Prediabetes</th>
-                <th>Diabetes</th>
+                <td>Prueba</td>
+                <td>Resultado Normal</td>
+                <td>Prediabetes</td>
+                <td>Diabetes</td>
             </tr>
         </thead>
         <tbody>
@@ -83,9 +56,9 @@
         </tbody>
     </table>
 
-    <h2 class="titulo">Síntomas comunes de la diabetes</h2>
-    <p>Los síntomas de la diabetes pueden variar, pero los más comunes incluyen:</p>
-    <ol>
+    <h2 class="classicH2">Síntomas comunes de la diabetes</h2>
+    <p class="classicParagraph">Los síntomas de la diabetes pueden variar, pero los más comunes incluyen:</p>
+    <ol class="classicList">
         <li>Sed excesiva</li>
         <li>Micción frecuente</li>
         <li>Fatiga</li>
@@ -93,9 +66,9 @@
         <li>Pérdida de peso inexplicable</li>
     </ol>
 
-    <h2 class="titulo">Factores de riesgo</h2>
-    <p>Algunos factores que aumentan el riesgo de desarrollar diabetes incluyen:</p>
-    <ol>
+    <h2 class="classicH2">Factores de riesgo</h2>
+    <p class="classicParagraph">Algunos factores que aumentan el riesgo de desarrollar diabetes incluyen:</p>
+    <ol class="classicList">
         <li>Antecedentes familiares de diabetes</li>
         <li>Sedentarismo</li>
         <li>Obesidad</li>
@@ -103,18 +76,18 @@
         <li>Hipertensión arterial</li>
     </ol>
 
-    <h2 class="titulo">Complicaciones</h2>
-    <p>Si la diabetes no se controla adecuadamente, puede llevar a complicaciones graves:</p>
-    <ol>
+    <h2 class="classicH2">Complicaciones</h2>
+    <p class="classicParagraph">Si la diabetes no se controla adecuadamente, puede llevar a complicaciones graves:</p>
+    <ol class="classicList">
         <li>Problemas cardiovasculares</li>
         <li>Daño renal</li>
         <li>Problemas oculares (retinopatía)</li>
         <li>Neuropatía diabética</li>
     </ol>
 
-    <h2 class="titulo">Prevención y gestión de la diabetes</h2>
-    <p>Para prevenir o gestionar la diabetes, se recomienda:</p>
-    <ol>
+    <h2 class="classicH2">Prevención y gestión de la diabetes</h2>
+    <p class="classicParagraph">Para prevenir o gestionar la diabetes, se recomienda:</p>
+    <ol class="classicList">
         <li>Mantener una dieta saludable</li>
         <li>Hacer ejercicio regularmente</li>
         <li>Controlar el peso</li>
@@ -122,5 +95,6 @@
         <br>
     </ol>
 </div>
+<button class="classicButton" onclick="window.location.href = 'index.html';">Regresar</button>
 </body>
 </html>
