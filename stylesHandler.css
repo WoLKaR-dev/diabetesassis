@@ -85,7 +85,7 @@ body{
 }
 
 .classicInput:focus{
-    width: 50%;
+    width: 25%;
     border-color: #f2ddcc;
 }
 
@@ -130,6 +130,7 @@ body{
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 }
 
 .classicSelect{
@@ -142,6 +143,7 @@ body{
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: 'MontserratMedium';
 }
 
 .classicSelect option{
@@ -173,6 +175,10 @@ body{
         width: 20%;
         border-radius: 3.5vw;
     }
+    .classicInput:focus{
+        width: 90%;
+    }
+
     .classicButton{
         aspect-ratio: 1920/720;
         width: 30%;

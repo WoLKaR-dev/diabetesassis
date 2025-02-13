@@ -51,10 +51,9 @@
   <div class="classicDiv">
     <h2 class="classicH2">Planifica tu menú</h2>
     <label class="classicLabel" for="selectIngredient">Tipo de alimento:</label>
-
-    <select class="classicSelect" id="selectIngredient">
-      <option value="Leche, entera, desnatada, semidesnatada" class="ingredientOption">Leche, entera, desnatada,
-        semidesnatada</option>
+    <select class="classicSelect" id="selectIngredient" onchange="showExtraOptions()">
+      <option value="Leche, entera, desnatada, semidesnatada" class="ingredientOption">Leche, entera, desnatada,semidesnatada</option>  
+      <option value="personalizado" class="ingredientOption">Personalizado</option>
       <option value="Yogur natural" class="ingredientOption">Yogur natural</option>
       <option value="Yogur Sabores" class="ingredientOption">Yogur Sabores</option>
       <option value="Queso de burgos" class="ingredientOption">Queso de burgos</option>
@@ -104,8 +103,15 @@
     </select>
 
     <label class="classicLabel" for="menuMakerQuantity">Cantidad, en ml, gr o unidades según el alimento:</label>
-
     <input type="number" class="classicInput" id="menuMakerQuantity" min="0">
+
+    <div id = "extraInformation" style="display: none; flex-direction: column; justify-content: center; align-items: center; width: 100%;"> <!-- Div personalizado-->
+      <label for="porCada100" class="classicLabel">Cantidad de hidratos por cada 100 gr:</label>
+      <input type="number" id="porCada100" class="classicInput">
+      <label for="foodName" class="classicLabel">Nombre del Alimento:</label>
+      <input type="text" id = "foodName" class="classicInput">
+    </div>
+
     <div class="classicDiv" style="display: flex; flex-direction: row; justify-content: center; gap: 10px;">
       <button class="classicButton" id="agregarFila">Agregar Fila</button>
       <button class="classicButton" id="eliminarFila">Eliminar Fila</button>

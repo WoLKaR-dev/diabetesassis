@@ -1,40 +1,35 @@
-function calcularRaciones() {
-    const gramos = parseFloat(document.getElementById('hidratos').value);
-    const cada100 = parseFloat(document.getElementById('cada100').value);
-  
+function calcularRaciones(hidratos, cada100) {
     // Verifica si los valores son válidos
-    if (isNaN(gramos) || isNaN(cada100)) {
-        document.getElementById('resultado').innerText = "Por favor, introduce valores numéricos válidos.";
-        return;
+    if (isNaN(hidratos) || isNaN(cada100)) {
+        return 0;
     }
-  
+
     // Calcula las raciones
-    let raciones = (gramos / 100) * cada100 / 10;
-    
-    // Muestra el resultado en el div
-    document.getElementById('resultado').innerText = "Raciones calculadas: " + raciones.toFixed(2);
-  }
-  
-  
-  // JavaScript para añadir interactividad al formulario
-  document.addEventListener("DOMContentLoaded", function() {
-      const opciones = document.querySelectorAll("select");
-    
-      // Ocultar las opciones desplegables al cargar la página
-      opciones.forEach(opcion => opcion.size = 1);
-    
-      // Mostrar opciones desplegables al hacer clic en el formulario
-      const formulario = document.getElementById("miFormulario");
-      formulario.addEventListener("click", function(event) {
+    let raciones = (hidratos / 100) * cada100 / 10;
+
+    return raciones;
+}
+
+
+// JavaScript para añadir interactividad al formulario
+document.addEventListener("DOMContentLoaded", function () {
+    const opciones = document.querySelectorAll("select");
+
+    // Ocultar las opciones desplegables al cargar la página
+    opciones.forEach(opcion => opcion.size = 1);
+
+    // Mostrar opciones desplegables al hacer clic en el formulario
+    const formulario = document.getElementById("miFormulario");
+    formulario.addEventListener("click", function (event) {
         // Mostrar todas las opciones desplegables al hacer clic en el formulario
         opciones.forEach(opcion => {
-          opcion.size = opcion.size === 1 ? opcion.length : 1;
+            opcion.size = opcion.size === 1 ? opcion.length : 1;
         });
-      });
     });
-  
-   // Tabla de valores
-  const tablaDeValores = {
+});
+
+// Tabla de valores
+const tablaDeValores = {
     "Leche, entera, desnatada, semidesnatada": 200,
     "Yogur natural": 2,
     "Yogur Sabores": 0.6,
@@ -78,80 +73,126 @@ function calcularRaciones() {
     "Zanahoria Cruda": 100,
     "Cebolla, cruda, frita o asada": 100,
     "Remolacha, guisantes, habas-cocidos.": 100
-    };
-    
-    // JavaScript para la calculadora
-    document.addEventListener("DOMContentLoaded", function() {
-      const opcion1 = document.getElementById("selectIngredient");
-      const opcion2 = document.getElementById("menuMakerQuantity");
-      const tabla = document.getElementById("calculatorTable").querySelector("tbody");
-      const agregarFilaBtn = document.getElementById("agregarFila");
-      const eliminarFilaBtn = document.getElementById("eliminarFila");
-      const sumaTotal = document.getElementById("sumaTotal");
-    
-      opcion1.addEventListener("change", function() {
-          calcularResultado();
-      });
-    
-      opcion2.addEventListener("input", function() {
-          calcularResultado();
-      });
-    
-      agregarFilaBtn.addEventListener("click", function() {
-          agregarFila();
-      });
-    
-      eliminarFilaBtn.addEventListener("click", function() {
-          eliminarFila();
-      });
-    
-      function calcularResultado() {
-          const resultado = (opcion1.value in tablaDeValores && typeof tablaDeValores[opcion1.value] === "number") ? opcion2.value / tablaDeValores[opcion1.value] : "No definido";
-          return resultado !== "No definido" ? parseFloat(resultado).toFixed(2) : resultado;
-      }
-    
-      function agregarFila() {
-          const fila = document.createElement("tr");
-          const tdOpcion1 = document.createElement("td");
-          const tdOpcion2 = document.createElement("td");
-          const tdResultado = document.createElement("td");
-    
-          tdOpcion1.textContent = opcion1.value;
-          tdOpcion2.textContent = opcion2.value;
-          tdResultado.textContent = calcularResultado();
-    
-          fila.appendChild(tdOpcion1);
-          fila.appendChild(tdOpcion2);
-          fila.appendChild(tdResultado);
-    
-          tabla.appendChild(fila);
-    
-          // Actualizar la suma total
-          actualizarSumaTotal();
-      }
-    
-      function eliminarFila() {
-          const filas = tabla.querySelectorAll("tr");
-          if (filas.length > 0) {
-              tabla.removeChild(filas[filas.length - 1]);
-              // Actualizar la suma total después de eliminar la fila
-              actualizarSumaTotal();
-          }
-      }
-    
-      function actualizarSumaTotal() {
-          let suma = 0;
-          const filas = tabla.querySelectorAll("tr");
-          filas.forEach(fila => {
-              const resultado = parseFloat(fila.querySelector("td:last-child").textContent);
-              if (!isNaN(resultado)) {
-                  suma += resultado;
-              }
-          });
-    
-          sumaTotal.textContent = "Suma total de raciones: " + suma.toFixed(2) + " raciones";
-      }
-  });
-  
-    
-  
+};
+
+// JavaScript para la calculadora
+document.addEventListener("DOMContentLoaded", function () {
+    const opcion1 = document.getElementById("selectIngredient");
+    const opcion2 = document.getElementById("menuMakerQuantity");
+    const opcion3 = document.getElementById("porCada100");
+    const opcion4 = document.getElementById("foodName");
+    const tabla = document.getElementById("calculatorTable").querySelector("tbody");
+    const agregarFilaBtn = document.getElementById("agregarFila");
+    const eliminarFilaBtn = document.getElementById("eliminarFila");
+    const sumaTotal = document.getElementById("sumaTotal");
+
+    opcion1.addEventListener("change", function () {
+        calcularResultado();
+    });
+
+    opcion2.addEventListener("input", function () {
+        calcularResultado();
+    });
+
+    agregarFilaBtn.addEventListener("click", function () {
+        if (opcion1.value == 'personalizado'){
+            agregarFilaPersonalizada();
+        }else{
+            agregarFilaClasica();
+        }
+        
+    });
+
+    eliminarFilaBtn.addEventListener("click", function () {
+        eliminarFila();
+    });
+
+    function calcularResultado() {
+        const resultado = (opcion1.value in tablaDeValores && typeof tablaDeValores[opcion1.value] === "number") ? opcion2.value / tablaDeValores[opcion1.value] : "No definido";
+        return resultado !== "No definido" ? parseFloat(resultado).toFixed(2) : resultado;
+    }
+
+    function agregarFilaPersonalizada(){
+        const fila = document.createElement("tr");
+        const tdOpcion1 = document.createElement("td");
+        const tdOpcion2 = document.createElement("td");
+        const tdResultado = document.createElement("td");
+
+        tdOpcion1.textContent = document.getElementById("foodName").value;
+        tdOpcion2.textContent = opcion2.value;
+        tdResultado.textContent = calcularRaciones(document.getElementById("menuMakerQuantity").value, document.getElementById("porCada100").value);
+
+        fila.appendChild(tdOpcion1);
+        fila.appendChild(tdOpcion2);
+        fila.appendChild(tdResultado);
+
+        tabla.appendChild(fila);
+
+        // Actualizar la suma total
+        actualizarSumaTotal();
+    }
+
+    function agregarFilaClasica() {
+        const fila = document.createElement("tr");
+        const tdOpcion1 = document.createElement("td");
+        const tdOpcion2 = document.createElement("td");
+        const tdResultado = document.createElement("td");
+
+        tdOpcion1.textContent = opcion1.value;
+        tdOpcion2.textContent = opcion2.value;
+        tdResultado.textContent = calcularResultado();
+
+        fila.appendChild(tdOpcion1);
+        fila.appendChild(tdOpcion2);
+        fila.appendChild(tdResultado);
+
+        tabla.appendChild(fila);
+
+        // Actualizar la suma total
+        actualizarSumaTotal();
+    }
+
+    function eliminarFila() {
+        const filas = tabla.querySelectorAll("tr");
+        if (filas.length > 0) {
+            tabla.removeChild(filas[filas.length - 1]);
+            // Actualizar la suma total después de eliminar la fila
+            actualizarSumaTotal();
+        }
+    }
+
+    function actualizarSumaTotal() {
+        let suma = 0;
+        const filas = tabla.querySelectorAll("tr");
+        filas.forEach(fila => {
+            const resultado = parseFloat(fila.querySelector("td:last-child").textContent);
+            if (!isNaN(resultado)) {
+                suma += resultado;
+            }
+        });
+
+        sumaTotal.textContent = "Suma total de raciones: " + suma.toFixed(2) + " raciones";
+    }
+});
+
+
+
+function showExtraOptions() {
+    const selectedValue = document.getElementById('selectIngredient').value;
+    const extraOptions = document.getElementById('extraInformation');
+    if (selectedValue == 'personalizado'){
+        extraOptions.style.display = 'flex';
+    }else{
+        extraOptions.style.display = 'none';
+    }
+
+};
+
+function newRow(){
+    const selectedValue = document.getElementById('selectIngredient').value;
+    if (selectedValue == 'personalizado'){
+        
+    }else{
+
+    }
+}
