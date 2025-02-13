@@ -17,6 +17,9 @@
             <button class="classicButton" onclick="showCalculator('simple')">Simple</button>
             <button class="classicButton" onclick="showCalculator('advanced')">Avanzada</button>
         </div> 
+        <label class="classicLabel"> Usaré materia grasa
+            <input type="checkbox" class="classicCheckbox" onchange="checkedCheckbox()">
+        </label>
     </div>
 
     <div class="classicDiv" id = "simpleCalculator">
@@ -25,6 +28,11 @@
         <input type="number" class="classicInput" id = 'simpleFoodAmount'>
         <p class="classicParagraph"> Introduce la cantidad de hidratos en gramos por cada 100: </p>
         <input type="number" class="classicInput" id = 'simpleEach100'>
+        <div style="display: none; flex-direction: column; width: 100%; align-items: center; justify-content: center;" id="simpleFatOption">
+            <p class="classicParagraph">Introduce la cantidad de materia grasa por cada 100:</p>
+            <input type="number" class="classicInput" id = 'simpleFatEach100'>
+        </div>
+
         <button class="classicButton" onclick="simpleCalc()">Calcular</button>
         <p class="classicParagraph" id = 'finalResult'>Raciones calculadas: 0</p>
     </div>
@@ -36,6 +44,10 @@
         <input type="number" class="classicInput" id = 'advancedFoodAmount'>
         <p class="classicParagraph">Introduce la cantidad de hidratos en gramos por cada 100:</p>
         <input type="number" class="classicInput" id = 'advancedEach100'>
+        <div style="display: none; flex-direction: column; width: 100%; align-items: center; justify-content: center;" id="advancedFatOption">
+            <p class="classicParagraph">Introduce la cantidad de materia grasa por cada 100:</p>
+            <input type="number" class="classicInput" id = 'advancedFatEach100'>
+        </div>
         <p class="classicParagraph">Introduce el nombre del alimento que vas a comer (puedes dejarlo en blanco si es irrelevante):</p>
         <input type="text" class="classicInput" id = "foodName">
         <div style="display: flex; justify-content: center; width: 100%; gap: 5px;">

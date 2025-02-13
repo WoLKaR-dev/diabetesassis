@@ -128,9 +128,9 @@ body{
     color: #f2ddcc;
     font-family: 'MontserratMedium';
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .classicSelect{
@@ -168,6 +168,23 @@ body{
     margin-left: 10px;
 }
 
+.classicCheckbox{
+    margin: 10px;
+    appearance: none;
+    background-color: #222d4d;
+    color: #f2ddcc;
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    width: 2vw;
+    height: 2vw;
+    border-radius: 10px;
+    position: relative;
+    transition: ease-in-out 0.15s;
+}
+
+.classicCheckbox:checked{
+    background-color: #f2ddcc;
+}
+
 
 @media (max-width: 768px) {
     .classicInput{
@@ -192,6 +209,11 @@ body{
     }
     .classicSelect{
         font-size: 4vw;
+    }
+    .classicCheckbox{
+        width: 5vw;
+        height: 5vw;
+        border-radius: 5px;
     }
 }
 
