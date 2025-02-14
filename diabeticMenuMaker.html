@@ -14,44 +14,22 @@
   <h1 class="classicH1">Planificador de Menús Diabéticos</h1>
 
 
-  <div class="classicDiv"> <!-- Instrucciones-->
-    <h2 class="classicH2">Instrucciones</h2>
 
-    <h3 class=" classicH3">Tipo de alimento y cantidad:</h3>
-    <ul class="classicList">
-      <li>Introduce el tipo de alimento que deseas agregar.</li>
-      <li>Indica la cantidad correspondiente en mililitros (ml), gramos (gr) o unidades según sea apropiado para el
-        alimento.</li>
-    </ul>
-
-    <h3 class="classicH3">Añadir al menú:</h3>
-    <ul class="classicList">
-      <li>Pulsa en "Añadir fila" para incluir el alimento con su cantidad en tu menú.</li>
-    </ul>
-
-    <h3 class=" classicH3">Eliminar filas:</h3>
-    <ul class=" classicList">
-      <li>Usa la opción "Eliminar filas" para borrar la opción más reciente que hayas añadido a tu menú.</li>
-    </ul>
-
-    <h3 class="classicH3">Yogures y galletas:</h3>
-    <ul class="classicList">
-      <li>Yogures: Deben ser ingresados utilizando puntos para las fracciones. Por ejemplo, si tienes medio yogur, debes
-        poner "0.5".</li>
-      <li>Galletas: Deben ser ingresadas en gramos.</li>
-    </ul>
-
-    <h3 class="classicH3">Alimentos libres:</h3>
-    <ul class="classicList">
-      <li>Los alimentos que son considerados "libres" no aparecerán en la lista.</li>
-    </ul>
+  <div class="classicDiv"> <!--Menu selector-->
+    <h2 class="classicH2">Versión del menú</h2>
+    <div style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <button class="classicButton" onclick="openSpecificMenuMaker(1)">Clásica</button>
+      <button class="classicButton" onclick="openSpecificMenuMaker(2)" style="display: flex; justify-content: center; align-items: center;">KFC* <img src="kfcLog.png"></button>
+    </div>
+    <p class="classicParagraph" id="kfcAlert" style="display: none;">*Esta versión es una versión de desarrollo temprano. Está incompeta y puede tener errores.</p>
   </div>
 
 
-  <div class="classicDiv">
-    <h2 class="classicH2">Planifica tu menú</h2>
-    <label class="classicLabel" for="selectIngredient">Tipo de alimento:</label>
-    <select class="classicSelect" id="selectIngredient" onchange="showExtraOptions()">
+
+  <div class="classicDiv" id="classicMenu"> <!--Menu clasico-->
+    <h2 class="classicH2">Planifica tu menú Clásico</h2>
+    <label class="classicLabel" for="selectIngredientClassic">Tipo de alimento:</label>
+    <select class="classicSelect" id="selectIngredientClassic" onchange="showExtraOptionsClassic()">
       <option value="Leche, entera, desnatada, semidesnatada" class="ingredientOption">Leche, entera, desnatada,semidesnatada</option>  
       <option value="personalizado" class="ingredientOption">Personalizado</option>
       <option value="Yogur natural" class="ingredientOption">Yogur natural</option>
@@ -102,23 +80,23 @@
       </option>
     </select>
 
-    <label class="classicLabel" for="menuMakerQuantity">Cantidad, en ml, gr o unidades según el alimento:</label>
-    <input type="number" class="classicInput" id="menuMakerQuantity" min="0">
+    <label class="classicLabel" for="foodAmountClassic">Cantidad, en ml, gr o unidades según el alimento:</label>
+    <input type="number" class="classicInput" id="foodAmountClassic" min="0">
 
-    <div id = "extraInformation" style="display: none; flex-direction: column; justify-content: center; align-items: center; width: 100%;"> <!-- Div personalizado-->
-      <label for="porCada100" class="classicLabel">Cantidad de hidratos por cada 100 gr:</label>
-      <input type="number" id="porCada100" class="classicInput">
-      <label for="foodName" class="classicLabel">Nombre del Alimento:</label>
-      <input type="text" id = "foodName" class="classicInput">
+    <div id = "extraInformationClassic" style="display: none; flex-direction: column; justify-content: center; align-items: center; width: 100%;"> <!-- Div personalizado-->
+      <label for="each100Classic" class="classicLabel">Cantidad de hidratos por cada 100 gr:</label>
+      <input type="number" id="each100Classic" class="classicInput">
+      <label for="foodNameClassic" class="classicLabel">Nombre del Alimento:</label>
+      <input type="text" id = "foodNameClassic" class="classicInput">
     </div>
 
     <div class="classicDiv" style="display: flex; flex-direction: row; justify-content: center; gap: 10px;">
-      <button class="classicButton" id="agregarFila">Agregar Fila</button>
-      <button class="classicButton" id="eliminarFila">Eliminar Fila</button>
+      <button class="classicButton" id="agregarFila" onclick="agregarFilaClassic()">Agregar Fila</button>
+      <button class="classicButton" id="eliminarFila" onclick="eliminarFilaClassic()">Eliminar Fila</button>
     </div>
 
 
-    <table class="classicTable" id="calculatorTable">
+    <table class="classicTable" id="menuTableClassic">
       <thead>
         <tr>
           <td>Alimento</td>
@@ -130,9 +108,96 @@
       </tbody>
     </table>
 
-    <p id="sumaTotal" class="classicParagraph">Suma total de raciones: 0 raciones</p>
+    <p id="sumaTotalClassic" class="classicParagraph">Suma total de raciones: 0 raciones</p>
   
   </div>
+
+
+
+  <div class="classicDiv" id = "classicMenuInstructions"> <!-- Instrucciones-->
+    <h2 class="classicH2">Instrucciones</h2>
+
+    <h3 class=" classicH3">Tipo de alimento y cantidad:</h3>
+    <ul class="classicList">
+      <li>Introduce el tipo de alimento que deseas agregar.</li>
+      <li>Indica la cantidad correspondiente en mililitros (ml), gramos (gr) o unidades según sea apropiado para el
+        alimento.</li>
+    </ul>
+
+    <h3 class="classicH3">Añadir al menú:</h3>
+    <ul class="classicList">
+      <li>Pulsa en "Añadir fila" para incluir el alimento con su cantidad en tu menú.</li>
+    </ul>
+
+    <h3 class=" classicH3">Eliminar filas:</h3>
+    <ul class=" classicList">
+      <li>Usa la opción "Eliminar filas" para borrar la opción más reciente que hayas añadido a tu menú.</li>
+    </ul>
+
+    <h3 class="classicH3">Yogures y galletas:</h3>
+    <ul class="classicList">
+      <li>Yogures: Deben ser ingresados utilizando puntos para las fracciones. Por ejemplo, si tienes medio yogur, debes
+        poner "0.5".</li>
+      <li>Galletas: Deben ser ingresadas en gramos.</li>
+    </ul>
+
+    <h3 class="classicH3">Alimentos libres:</h3>
+    <ul class="classicList">
+      <li>Los alimentos que son considerados "libres" no aparecerán en la lista.</li>
+    </ul>
+  </div>
+
+
+
+  <div class="classicDiv" id="kfcMenu" style="display: none;"> <!--Menu KFC-->
+    <h2 class="classicH2">Planifica tu menú KFC</h2>
+    <a href="https://static.kfc.es/pdf/contenido-nutricional.pdf" class="classicLink"> Tabla de valores nutricionales </a>
+    <p class="classicParagraph"></p>
+    <label class="classicLabel" for="selectIngredientKFC">Tipo de alimento:</label>
+    <select class="classicSelect" id="selectIngredientKFC" onchange="showExtraOptionsKFC()">
+      <option value="Alitas picantes">Alitas picantes</option>
+      <option value="Aros de cebolla">Aros de cebolla</option>
+      <option value="Emmental bites">Emmental bites</option>
+      <option value="personalizado">Personalizado</option>
+      <option value="Pieza pollo cruji">Pieza pollo cruji</option>
+      <option value="Pieza pollo Original">Pieza pollo Original</option>
+      <option value="Tiras de pechuga Crispy">Tiras de pechuga Crispy</option>
+      <option value="Tiras de pechuga Original">Tiras de pechuga Original</option>
+      <option value="Tiras Veggie">Tiras Veggie</option>      
+    </select>
+
+    <label class="classicLabel" for="foodAmountKFC">Cantidad, en ml, gr o unidades según el alimento:</label>
+    <input type="number" class="classicInput" id="foodAmountKFC" min="0">
+
+    <div id = "extraInformationKFC" style="display: none; flex-direction: column; justify-content: center; align-items: center; width: 100%;"> <!-- Div personalizado-->
+      <label for="each100KFC" class="classicLabel">Cantidad de hidratos por cada 100 gr:</label>
+      <input type="number" id="each100KFC" class="classicInput">
+      <label for="foodNameKFC" class="classicLabel">Nombre del Alimento:</label>
+      <input type="text" id = "foodNameKFC" class="classicInput">
+    </div>
+
+    <div class="classicDiv" style="display: flex; flex-direction: row; justify-content: center; gap: 10px;">
+      <button class="classicButton" id="agregarFilaKFC" onclick="agregarFilaKFC()">Agregar Fila</button>
+      <button class="classicButton" id="eliminarFilaKFC" onclick="eliminarFilaKFC()">Eliminar Fila</button>
+    </div>
+
+
+    <table class="classicTable" id="menuTableKFC">
+      <thead>
+        <tr>
+          <td>Alimento</td>
+          <td>Cantidad</td>
+          <td>Raciones</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <p id="sumaTotalKFC" class="classicParagraph">Suma total de raciones: 0 raciones</p>
+  
+  </div>
+
   <button class="classicButton" onclick="window.location.href = 'index.html';">Regresar</button>
 
 

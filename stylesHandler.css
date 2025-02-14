@@ -185,6 +185,25 @@ body{
     background-color: #f2ddcc;
 }
 
+.classicButton img{
+    width: 3vw;
+}
+
+.classicLink{
+    font-family: 'MontserratMedium';
+    color: white;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: ease-in-out 0.25s;
+}
+
+.classicLink:hover{
+    border-color: #f2ddcc;
+}
+
 
 @media (max-width: 768px) {
     .classicInput{
@@ -214,6 +233,9 @@ body{
         width: 5vw;
         height: 5vw;
         border-radius: 5px;
+    }
+    .classicButton img{
+        width: 15vw;
     }
 }
 
