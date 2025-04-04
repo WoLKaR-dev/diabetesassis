@@ -1,72 +1,52 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes Assistance</title>
-    <link rel="stylesheet" href="stylesHandler.css">
-    <link rel="shortcut icon" href="hospital.ico" type="image/x-icon">
+    <link rel="stylesheet" href="mainPageStyles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>DiabetesAssis</title>
 </head>
-<body class="indexBody">
-
-    <div id="qrCode" onclick="document.getElementById('qrCode').style.display = 'none';"><img src="qrCode.png"></div>
-
-    <section class="indexSection">
-        <h1>Bienvenido de nuevo</h1>
-
-        <div class="grid-container">
-
-            <div class="grid-item-left" onclick="window.location.href='fastRationsCalculator.html'">
-                <img src="calculator_icon.jpg" class="bigImg">
-                <p>Calcula tus raciones en base a los hidratos de carbono</p>
-            </div>
-
-            <div class="grid-item-right">
-
-                <div class="sub-item2" onclick="window.location.href='diabeticMenuMaker.html'">
-                    <img src="menu_icon.jpg" class="leftImg">
-                    <p>Calcula tu menú de raciones</p>
-                </div>
-
-                <div class="sub-item" onclick="window.location.href='datos.html'">
-                    <img src="dataTable_icon.jpg" class="leftImg">
-                    <p>Consulta las cantidades de alimentos por ración</p>
-                </div>
-                
-            </div>
-            
-
+<body>
+    <div class="presentationDiv">
+        <img src="Icon.png" alt="">
+        <div>
+            <h1 class="bigTitle">Tu asistencia de Diabetes.</h1>
+            <h2 class="descTitle">Fácil. Rápido. Gratis.</h2>
         </div>
-
-    </section>
-
-    <section class="indexSection">
-        <h2>Herramientas que podrías necesitar</h2>
-
-        <div class="grid-container">
-
-            <div class="grid-item-left" onclick="window.location.href='recetas.html'">
-                <img src="ingredients_icon.jpg" class="bigImg">
-                <p>Algunas recetas totalmente diseñadas para ti</p>
-            </div>
-
-            <div class="grid-item-right">
-
-                <div class="sub-item2" onclick="window.location.href='diagnostico.html'">
-                    <img src="hospital_icon.jpg" class="leftImg">
-                    <p>¿Cuáles son los síntomas de la Diabetes Tipo 1?</p>
-                </div>
-
-                <div class="sub-item" onclick="document.getElementById('qrCode').style.display = 'flex';">
-                    <img src="qrCode_icon.jpg" class="leftImg">
-                    <p>Compárteme para ayudar a más personas</p>
-                </div>
-                
-            </div>
+    </div>
+    <div class="feature" style="background-color: #CC9926;">
+        <h1 style="color: #080B22;">Fácil.</h1>
+        <p style="color: #080B22;">DiabetesAssis posee una interfaz viva e intuitiva, <b>se actualiza cada poco tiempo</b> y está adaptada a la mayoría de dispositivos móviles. Además, en su versión App, cada característica de la aplicación contiene unos <b>primeros pasos guiados</b>. </p>
+        <img src="easy.jpg" alt="">
+    </div>
+    <div class="feature" style="background-color: #FDFDFD;">
+        <h1 style="color: #080B22;">Rápido.</h1>
+        <p style="color: #080B22;">DiabetesAssis no tiene pérdida, <b>realiza los cálculos rápidamente</b> y es eficiente. <b>No contiene anuncios intrusivos</b> y está diseñada para acceder a lo que buscas eficientemente.</p>
+        <img src="fast.jpg" alt="">
+    </div>
+    <div class="feature" style="background-color: #CC9926;">
+        <h1 style="color: #080B22;">Gratis.</h1>
+        <p style="color: #080B22;">DiabetesAssis tiene una versión web de código abierto y totalmente gratuita. En algunas versiones, contiene anuncios <b>no invasivos</b>. Las versiones de DiabetesAssis planean ser gratuitas <b>permanentemente</b>. </p>
+        <img src="free.jpg" alt="">
+    </div>
+    <div class="feature" style="background-color: #080B22;">
+        <h1 style="color: #CC9926;">Descargar DiabetesAssis</h1>
+        <p style="color: #CC9926;">Puedes escoger la versión de DiabetesAssis que <b>más se adapte a tu dispositivo</b>. Si usas <b>iOS</b> (iPhone, iPad...) usa su versión web. Si eres usuario de <b>Android</b>, puedes instalar su versión APK o acceder a su versión de prueba de Google Play Store, así como usar su versión web.</p>
+        <div class="buttonDock">
+            <button onclick="window.location.href='./main.html';">
+                <span class="material-icons">language</span>
+                <p style="color: #080B22;" >Versión Web</p>
+            </button>
+            <button onclick="window.location.href='./diabetesassis.apk';">
+                <span class="material-icons">download</span>
+                <p style="color: #080B22;" >Versión APK</p>
+            </button>
+            <button>
+                <span class="material-icons">install_mobile</span>
+                <p style="color: #080B22;" >Versión Play Store</p>
+            </button>
         </div>
-    </section>
-    
-
+    </div>
 </body>
 </html>

@@ -1,0 +1,156 @@
+:root {
+    --golden: #CC9926;
+    --darkblue: #080B22;
+    --lightblue: #3A6EA5;
+    --white: #FDFDFD;
+}
+
+@font-face {
+    font-family: 'Outfit-Regular';
+    src: url(Outfit-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Outfit-Bold';
+    src: url(Outfit-Bold.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+ul,
+ol {
+    margin: 0;
+}
+
+.presentationDiv {
+    background-color: var(--darkblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding: 2%;
+    gap: 2%;
+}
+
+.presentationDiv img {
+    aspect-ratio: 1 / 1;
+    width: 10%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.bigTitle {
+    font-family: 'Outfit-Bold';
+    color: var(--white);
+    font-size: 2.5vw;
+    margin: 0;
+
+}
+
+.descTitle {
+    font-family: 'Outfit-Regular';
+    color: var(--white);
+    font-size: 1.5vw;
+}
+
+.feature {
+    padding-bottom: 0px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature img {
+    margin-top: 15px;
+    aspect-ratio: 1/1;
+    width: 20%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 0px -15px 53px -18px var(--darkblue);
+}
+
+.feature h1 {
+    padding-top: 10px;
+    font-family: 'Outfit-Bold';
+    text-align: center;
+    font-size: 4vw;
+}
+
+.feature p {
+    padding: 10px 15% 15px 15%;
+    font-family: 'Outfit-Regular';
+    font-size: 2vw;
+}
+
+.buttonDock {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.buttonDock button {
+    aspect-ratio: 1/1;
+    width: 30%;
+    overflow: hidden;
+    background-color: var(--golden);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 83px -32px #CC9926;
+}
+
+@media (max-width: 720px) {
+    .presentationDiv {
+        padding: 7%;
+        gap: 20px;
+    }
+
+    .presentationDiv img {
+        width: 30%;
+    }
+
+    .bigTitle {
+        font-size: 8vw;
+    }
+
+    .descTitle {
+        font-size: 5vw;
+    }
+
+    .feature h1 {
+        font-size: 7vw;
+    }
+
+    .feature p {
+        padding: 10px 10% 15px 10%;
+        font-size: 4vw;
+    }
+
+
+    .feature img {
+        width: 50%;
+    }
+
+.buttonDock{
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .buttonDock button {
+        aspect-ratio: 1/1;
+        width: 30%;
+    }
+
+}
