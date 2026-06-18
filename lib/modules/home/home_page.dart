@@ -4,7 +4,8 @@ import 'package:wolkarutils/wolkarutils.dart';
 
 /// Home page, designed to welcome user
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key, required this.travelTo});
+  final Function(int) travelTo;
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -23,14 +24,23 @@ class _HomePageState extends State<HomePage> {
         spacing: 10,
         children: [
           BigHomeCard(
+            onTap: () {
+              widget.travelTo(1);
+            },
             asset: "assets/images/calculator.webp",
             text: "Comienza a calcular tus raciones ya mismo. ",
           ),
           SmallHomeCard(
+            onTap: () {
+              widget.travelTo(2);
+            },
             asset: "assets/images/menu.webp",
             text: "Crea menús con diferentes cálculos",
           ),
           SmallHomeCard(
+            onTap: () {
+              widget.travelTo(3);
+            },
             asset: "assets/images/data.webp",
             text: "Echa un vistazo a los datos públicos",
           ),

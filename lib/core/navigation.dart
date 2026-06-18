@@ -14,16 +14,30 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _NavigationPageState extends State<NavigationPage> {
+  //STATE Selected index
+  int selectedIndex = 0;
+
   /// Appbar names
   List<String> appBarNames = ["Inicio", "Calculadora", "Menú", "Datos"];
 
-  /// Drawer pages
-  List<Widget> drawerPages = [HomePage(), CalculatorPage(), MenuPage(), DataPage()];
+  //LOGIC Updates page index (for external pages)
+  void updateIndex(int newIndex) {
+    setState(() {
+      selectedIndex = newIndex;
+    });
+  }
 
-  //STATE Selected index
-  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    //ATOMS Drawer pages
+    /// Drawer pages
+    List<Widget> drawerPages = [
+      HomePage(travelTo: updateIndex),
+      CalculatorPage(),
+      MenuPage(),
+      DataPage(),
+    ];
+
     //ATOMS Appbar
     /// Main navigation page bar
     final appbar = AppBar(

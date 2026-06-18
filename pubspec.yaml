@@ -2,7 +2,7 @@ name: diabetesassis
 description: "Diabetesassis is an open-source project developed to help diabetics managing their glucose."
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.2+1
 
 environment:
   sdk: 3.12.0
