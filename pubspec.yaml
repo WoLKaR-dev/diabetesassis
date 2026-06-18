@@ -1,0 +1,45 @@
+name: diabetesassis
+description: "Diabetesassis is an open-source project developed to help diabetics managing their glucose."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0-180.0.dev
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  wolkarutils:
+    git:
+      url: "https://github.com/wolkar-dev/wolkarutils.git"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  web:
+    generate: true
+    image_path: "assets/icons/icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/fonts/
+  - assets/images/
+
+  fonts:
+  - family: Outfit
+    fonts:
+    - asset: assets/fonts/regular.ttf
+      weight: 500
+    - asset: assets/fonts/semi.ttf
+      weight: 600
+    - asset: assets/fonts/bold.ttf
+      weight: 700

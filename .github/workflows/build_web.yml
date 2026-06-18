@@ -1,0 +1,29 @@
+name: Build Web
+
+on: 
+  workflow_dispatch:
+  push: 
+    branches:
+      - main
+
+jobs:
+  build_web: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with: 
+          channel: stable
+      
+      - name: Build Web
+        run: flutter build web --release --base-href /diabetesassis/
+
+      - name: Upload Compiled Web
+        uses: JamesIves/github-pages-deploy-action@v4 
+        with: 
+          folder: build/web 
+          branch: web
+          token: ${{ secrets.GITHUB_TOKEN }}
