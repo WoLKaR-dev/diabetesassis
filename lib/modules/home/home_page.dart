@@ -1,5 +1,6 @@
 import 'package:diabetesassis/modules/home/home_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:wolkarutils/wolkarutils.dart';
 
 /// Home page, designed to welcome user
@@ -43,6 +44,18 @@ class _HomePageState extends State<HomePage> {
             },
             asset: "assets/images/data.webp",
             text: "Echa un vistazo a los datos públicos",
+          ),
+          SmallHomeCard(
+            onTap: () async {
+              final url = Uri.parse(
+                "https://play.google.com/store/apps/details?id=com.wolkardev.diabetesassis&pli=1",
+              );
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
+            },
+            asset: "assets/images/diazen.webp",
+            text: "Instala Diazen, la evolución de diabetesassis",
           ),
         ],
       ),
