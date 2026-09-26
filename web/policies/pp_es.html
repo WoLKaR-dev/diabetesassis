@@ -1,0 +1,135 @@
+<style>
+.tool-md-preview, .export-container {
+  width: min(100%, 900px);
+  max-width: 900px;
+  min-height: 100%;
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 68px) clamp(22px, 5vw, 58px);
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.tool-md-preview img, .export-container img,
+.tool-md-preview video, .export-container video,
+.tool-md-preview svg, .export-container svg { max-width: 100%; height: auto; }
+.tool-md-preview pre, .export-container pre {
+  max-width: 100%;
+  margin: 1.4em 0;
+  padding: 1.05em 1.2em;
+  overflow-x: auto;
+  box-sizing: border-box;
+  color: var(--html-code-text) !important;
+  font-size: 0.9em;
+  line-height: 1.62;
+  tab-size: 2;
+}
+.tool-md-preview pre code, .export-container pre code {
+  display: block;
+  min-width: max-content;
+  border: 0;
+  background: transparent !important;
+  color: var(--html-code-text) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.tool-md-preview table, .export-container table { max-width: 100%; overflow-x: auto; }
+@media (max-width: 640px) {
+  .tool-md-preview, .export-container { padding: 28px 20px; }
+  .tool-md-preview pre, .export-container pre { margin-inline: -4px; padding: 0.9em 1em; }
+}
+
+body { margin: 0; background: #f6f8fa; color: #1f2328; }
+.tool-md-preview, .export-container {
+  background: #ffffff;
+  color: #1f2328;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  --html-code-text: #24292f;
+  --html-code-keyword: #cf222e;
+  --html-code-title: #8250df;
+  --html-code-string: #0a3069;
+  --html-code-number: #0550ae;
+  --html-code-comment: #6e7781;
+}
+h1, h2, h3, h4 { color: #1f2328; font-weight: 650; line-height: 1.25; }
+h1 { margin-bottom: 0.7em; padding-bottom: 0.32em; border-bottom: 1px solid #d8dee4; font-size: 2em; }
+h2 { margin-top: 1.75em; padding-bottom: 0.3em; border-bottom: 1px solid #d8dee4; font-size: 1.5em; }
+h3 { margin-top: 1.5em; font-size: 1.25em; }
+a { color: #0969da; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+blockquote { margin: 1em 0; padding: 0 1em; border-left: 0.25em solid #d0d7de; color: #59636e; }
+code { border-radius: 6px; background: #eff1f3; color: #1f2328; padding: 0.18em 0.38em; font-size: 0.88em; }
+pre { border: 1px solid #d8dee4; border-radius: 8px; background: #f6f8fa; box-shadow: none; }
+pre code { background: transparent; padding: 0; }
+table { display: table; width: 100%; border-spacing: 0; border-collapse: collapse; }
+th { background: #f6f8fa; font-weight: 650; }
+th, td { border: 1px solid #d0d7de; padding: 0.55em 0.8em; }
+tr:nth-child(2n) { background: #f6f8fa; }
+hr { height: 1px; border: 0; background: #d8dee4; }
+img { border-radius: 6px; }
+
+.tool-md-preview pre .hljs-keyword, .export-container pre .hljs-keyword,
+.tool-md-preview pre .hljs-selector-tag, .export-container pre .hljs-selector-tag,
+.tool-md-preview pre .hljs-literal, .export-container pre .hljs-literal { color: var(--html-code-keyword) !important; }
+.tool-md-preview pre .hljs-title, .export-container pre .hljs-title,
+.tool-md-preview pre .hljs-title.function_, .export-container pre .hljs-title.function_,
+.tool-md-preview pre .hljs-built_in, .export-container pre .hljs-built_in { color: var(--html-code-title) !important; }
+.tool-md-preview pre .hljs-string, .export-container pre .hljs-string,
+.tool-md-preview pre .hljs-attr, .export-container pre .hljs-attr,
+.tool-md-preview pre .hljs-name, .export-container pre .hljs-name { color: var(--html-code-string) !important; }
+.tool-md-preview pre .hljs-number, .export-container pre .hljs-number,
+.tool-md-preview pre .hljs-symbol, .export-container pre .hljs-symbol,
+.tool-md-preview pre .hljs-variable, .export-container pre .hljs-variable { color: var(--html-code-number) !important; }
+.tool-md-preview pre .hljs-comment, .export-container pre .hljs-comment,
+.tool-md-preview pre .hljs-quote, .export-container pre .hljs-quote { color: var(--html-code-comment) !important; font-style: italic; }
+.tool-md-preview pre .hljs-params, .export-container pre .hljs-params,
+.tool-md-preview pre .hljs-punctuation, .export-container pre .hljs-punctuation { color: var(--html-code-text) !important; }
+</style>
+<div class="export-container">
+<h2 id="pol-tica-de-privacidad">Política de Privacidad</h2><p>Fecha de entrada en vigor: 5 de octubre de 2026
+Esta política de privacidad está en Español. Léela también en <a href="https://wolkar-dev.github.io/diabetesassis/policies/pp_en.html">English</a>.</p>
+<h2 id="responsabilidad-">Responsabilidad.</h2><ul>
+<li>Óscar Fiz Arnés</li>
+<li><a href="mailto:wolkar.rblx@gmail.com">wolkar.rblx@gmail.com</a></li>
+</ul>
+<h2 id="datos-recopilados">Datos recopilados</h2><h3 id="datos-recopilados-por-diazen">Datos recopilados por Diazen</h3><ul>
+<li>Cálculos de la calculadora de raciones, menús, registros, perfiles, preferencias, ingredientes, cámara, datos de uso de Diazen.</li>
+<li>Peticiones de IA de la calculadora de raciones.</li>
+</ul>
+<h3 id="datos-recopilados-autom-ticamente-por-terceros">Datos recopilados automáticamente por terceros</h3><ul>
+<li>Al utilizar Diazen, Google AdMob puede recopilar automáticamente: identificadores de publicidad (IDFA en iOS, GAID en Android), dirección IP, datos de uso de la app, información del dispositivo (modelo, sistema operativo, idioma) y, si corresponde, ubicación aproximada. Estos datos se utilizan para mostrar anuncios personalizados o contextuales, si se presta consentimiento al iniciar Diazen.</li>
+</ul>
+<h2 id="finalidad-del-tratamiento">Finalidad del tratamiento</h2><ul>
+<li><strong>Recopilados por Diazen a excepción de IA</strong>: Realizar cálculos localmente, permitir la persistencia de datos y mejorar la utilidad y uso diario de Diazen.</li>
+<li><strong>IA en Diazen</strong>: Procesar la información en un servidor externo, y realizar el cálculo de manera local.</li>
+<li><strong>Publicidad</strong>: Utilizamos Google AdMob para mostrar anuncios dentro de la app. Esto incluye:<ul>
+<li>Publicidad personalizada: basada en sus intereses y perfil de navegación (solo con su consentimiento previo, gestionado a través de nuestro sistema de consentimiento).</li>
+<li>Publicidad no personalizada: basada en el contexto de la app, sin perfilado de comportamiento.</li>
+</ul>
+</li>
+</ul>
+<h2 id="base-jur-dica">Base Jurídica</h2><ul>
+<li><strong>Datos locales</strong>: Se basa en el legítico consentimiento del usuario, prestado al iniciar Diazen. Estos datos pueden ser eliminados desde los ajustes del dispositivo en Aplicaciones &gt; Diazen &gt; Eliminar Datos. También se eliminan al desinstalar Diazen.</li>
+<li><strong>Publicidad</strong>: El tratamiento de datos para publicidad personalizada se basa en el consentimiento del usuario, que se solicita mediante nuestro gestor de consentimientos (CMP) al iniciar la app por primera vez. El usuario puede revocar este consentimiento en cualquier momento desde los ajustes del dispositivo.</li>
+</ul>
+<h2 id="destinatarios-y-cesiones">Destinatarios y cesiones</h2><ul>
+<li><strong>Datos introducidos por el usuario en Diazen (excepto IA)</strong>: Estos datos no se comparten con terceros, se almacenan localmente y sirven solo y exclusivamente para la mejora de la calidad de Diazen.</li>
+<li><strong>Datos de IA de Diazen</strong>: Estos datos se envían a servidores en EEUU para procesamiento de IA no local. Los cálculos finales se realizan en Diazen.</li>
+<li><strong>Google AdMob</strong>: Google actúa como encargado del tratamiento para la prestación del servicio publicitario. Los datos pueden ser transferidos a Estados Unidos amparados en las Cláusulas Contractuales Tipo de la Comisión Europea.
+Puedes consultar la política de privacidad de Google aquí: <a href="https://policies.google.com/privacy">Política de Privacidad de Google</a></li>
+</ul>
+<h2 id="transferencias-de-datos">Transferencias de Datos</h2><ul>
+<li><strong>Publicidad</strong>: Algunos de nuestros proveedores, como Google LLC (AdMob), tienen sede en Estados Unidos. Cuando utilizas la app, tus datos pueden ser transferidos fuera del Espacio Económico Europeo. Google garantiza estas transferencias mediante las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea.</li>
+</ul>
+<h2 id="plazos-de-conservaci-n">Plazos de Conservación</h2><ul>
+<li><strong>Datos locales del usuario en Diazen</strong>: Se mantienen localmente permanentemente. Solo los registros se eliminan en un plazo de 31 días desde su creación.</li>
+</ul>
+<h2 id="derechos-del-usuario">Derechos del Usuario</h2><p>El usuario tiene derecho a:</p>
+<ul>
+<li><strong>Acceder a sus datos</strong> para el uso en Diazen.</li>
+<li><strong>Supresión de los datos</strong> para la eliminación de los datos locales.</li>
+<li><strong>Oposición de la recolección de datos para publicidad</strong> en la configuración del dispositivo.</li>
+</ul>
+<p>Puede escribirse un correo a <a href="mailto:wolkar.rblx@gmail.com">wolkar.rblx@gmail.com</a> para más información sobre como ejercer sus derechos.</p>
+<h2 id="medidas-de-seguridad">Medidas de seguridad</h2><p>Los datos del usuario son confidenciales y se guardan localmente en su dispositivo. Estos datos se mantienen de forma anónima siempre. Los datos enviados para procesamiento en la nube (IA) son anónimos y se mantienen cifrados.</p>
+<h2 id="cambios-en-la-pol-tica-de-privacidad">Cambios en la Política de Privacidad</h2><p>Nos reservamos el derecho de realizar modificaciones sobre esta política en cualquier momento. Se notificará con cada actualización de Diazen, al iniciar la aplicación.</p>
+
+</div>

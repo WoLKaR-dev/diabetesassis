@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Introducción y Calculadora <button onclick="window.location.href='index.html'">Volver</button></h1>
+
+    <h3>Las Raciones</h3>
+    <p>
+        Las raciones (también llamadas intercambios) son la unidad de medida estándar utilizada en la diabetes tipo 1
+        para simplificar el recuento de hidratos de carbono (carbohidratos) que se consumen en una comida.
+
+        <br><br>
+
+        A diferencia de las proteínas y las grasas, los hidratos de carbono son el nutriente que más impacto directo
+        tiene en los
+        niveles de glucosa en sangre. Convertir la comida a raciones permite calcular la dosis exacta de insulina rápida
+        que el cuerpo necesita.
+
+        <br><br>
+
+        Con Diazen, puedes calcular las raciones asociadas a un determinado peso de una manera sencilla usando
+        su apartado llamado "Calculadora". Puedes abrirlo pulsando el menú de arriba a la izquierda.
+        <img src="images/calculator/drawer.jpg" alt="">
+
+        Encontrarás así diferentes tipos de calculadora. Nos enfocaremos en la marcada "Clásica", en el
+        selector de arriba. Encontrarás debajo casillas que rellenar conforme a información nutricional.
+        Para la calculadora clásica, esta información es:
+        <br>- La cantidad en gramos del alimento que vas a comer.
+        <br>- La cantidad de gramos de hidratos de carbono que tu alimento tiene por cada 100 gramos. Esto lo
+        encuentras en la información nutricional del paquete de tu producto.
+        <img src="images/calculator/classic.jpg" alt="">
+
+        Una vez la información ya está completada, puedes pulsar CALCULAR para ver el resultado del cálculo
+        de la calculadora de Diazen.
+        <img src="images/calculator/alert.jpg" alt="">
+    </p>
+
+    <h3>Las Proteínas y Grasas</h3>
+    <p>
+        Aunque los hidratos de carbono son el nutriente con mayor impacto directo sobre la glucemia, las proteínas y las
+        grasas también se tienen en cuenta porque alteran la velocidad de digestión y se transforman parcialmente en
+        glucosa de forma tardía.
+
+        <br><br>Esta pequeña desviación se puede tener en cuenta en la propia calculadora si se extiende el apartado de
+        "Modificadores" y se marca el botón de "Grasas Y Proteínas". Este botón permite añadir la información
+        nutricional
+        de grasas y proteínas donde se indica, debajo de la casilla de Hidratos de Carbono
+        <img src="images/calculator/proteins.jpg" alt="">
+
+        Al pulsar el botón "CALCULAR", calculará de nuevo las raciones teniendo en cuenta la nueva suma.
+    </p>
+
+    <h3>Bolo</h3>
+    <p>
+        Un bolo es la dosis puntual de insulina rápida o ultra-rápida que se administra en un momento concreto para un
+        fin específico, a diferencia de la insulina basal, que cubre las necesidades energéticas de fondo durante las 24
+        horas.
+
+        <br><br>
+
+        Tipos principales de bolo <br>
+        - Bolo de comida: La insulina que se inyecta justo antes de comer para compensar los hidratos de
+        carbono (y las proteínas/grasas) de los alimentos. <br>
+        - Bolo de corrección: La insulina que se administra cuando la glucemia en sangre está por encima del objetivo,
+        para devolverla a rangos normales independientemente de si se va a comer o no.
+
+        <br><br>
+
+        En nuestra calculadora, se puede marcar el modificador "Bolo", que ayuda a calcular el bolo necesario.
+        Para usar esta función, debes activar <a href="apex.html">Apex</a> de manera gratuita y completar tu perfil en
+        <a href="settings.html">Ajustes</a>
+
+        <img src="images/calculator/bolus.jpg" alt="">
+
+        Ahora, rellena todos los datos requeridos en el apartado inferior. <br><br> Los datos extra son: <br>
+        - Glucosa objetivo: en mg/dL<br>
+        - Glucosa actual: en mg/dL <br>
+
+        <br>
+        Finalmente pulsa "CALCULAR". La información se mostrará debajo de las raciones.
+        <img src="images/calculator/bolus_result.jpg" alt="">
+
+        En este ejemplo, las unidades de insulina requeridas serían 0.5. Si la insulina objetivo está debajo de la
+        actual, se incluye el bolo corrector en la suma.
+    </p>
+
+    <h3>Predicciones</h3>
+    <p>
+        Las predicciones permiten conocer cuánto subirá o bajará la glucosa con una estimación simple. En Diazen,
+        podemos
+        estimar la subida o bajada de glucosa a dos horas, marcando el modificador "Predicción". Este modificador es el
+        complemento perfecto del modificador "Bolo", porque usa exactamente los mismos parámetros. Puedes marcar los dos
+        para obtener el doble de información en base a los mismos parámetros.
+
+        <br><br>
+
+        Igual que con "Bolo", debes tener activo <a href="apex.html">Apex</a> y configurado tu perfil en
+        <a href="settings.html">Ajustes</a>.
+        <img src="images/calculator/pre.jpg" alt="">
+
+        Ahora, rellena todos los datos requeridos en el apartado inferior. <br><br> Los datos extra son: <br>
+        - Glucosa objetivo: en mg/dL<br>
+        - Glucosa actual: en mg/dL <br>
+
+        <br>
+        Finalmente pulsa "CALCULAR". La información se mostrará debajo de las raciones.
+        <img src="images/calculator/pre_result.jpg" alt=""></img>
+
+        Esta es una estimación educativa. No tiene en cuenta la absorción retardada de las proteínas y grasas.
+    </p>
+
+    <h3>El Modelo de Varsovia</h3>
+    <p>
+        Este modelo calcula la insulina adicional necesaria para cubrir el efecto hiperglucemiante retardado de las
+        proteínas y las grasas cuando se consumen en grandes cantidades. Se activa opcionalmente si la comida supera
+        ciertos umbrales.
+
+        <br><br>
+
+        Si la comida contiene más de 40 g de grasa o más de 25 g de proteína (en Diazen), se considera que
+        tiene un impacto significativo. En este caso, se activa el modelo de Varsovia. En cualquier otro caso, no
+        suele ser necesario este cálculo.
+
+        <br><br>
+
+        Marca el modificador "Varsovia" en el apartado de modificadores.
+        Igual que con "Bolo" y "Predicción", debes tener activo <a href="apex.html">Apex</a> y configurado tu perfil en
+        <a href="settings.html">Ajustes</a>.
+        <img src="images/calculator/var.jpg" alt="">
+
+        El modelo de Varsovia determina un bolo extra que añadir para cubrir los efectos retardados. Este bolo se divide
+        en dos partes, una instantánea, que se debe sumar al bolo normal del cálculo y otra retardada, que se puede
+        poner
+        de manera extendida. Es recomendable usar Varsovia junto con los modificadores "Bolo" y "Grasas y Proteínas".
+
+        <br><br>
+
+        Rellena toda la información requerida y pulsa "CALCULAR"
+        <img src="images/calculator/var_result.jpg" alt="">
+    </p>
+
+    <h3>Otros tipos de Calculadora</h3>
+    <p>
+        Existen dos tipos de calculadora con utilidad: <br>
+        - De Ingredientes: Permite reutilizar ingredientes, como se puede ver en
+        <a href="ingredients.html">Ingredientes</a> <br>
+        - De IA: Solo disponible con <a href="apex.html">Apex</a>. Calcula las raciones estimadas en base a la
+        descripción dada.
+    </p>
+</body>
+
+</html>
