@@ -1,75 +1,135 @@
-﻿<!DOCTYPE html>
-<html>
+<style>
+.tool-md-preview, .export-container {
+  width: min(100%, 900px);
+  max-width: 900px;
+  min-height: 100%;
+  margin-inline: auto;
+  padding: clamp(32px, 5vw, 68px) clamp(22px, 5vw, 58px);
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.tool-md-preview img, .export-container img,
+.tool-md-preview video, .export-container video,
+.tool-md-preview svg, .export-container svg { max-width: 100%; height: auto; }
+.tool-md-preview pre, .export-container pre {
+  max-width: 100%;
+  margin: 1.4em 0;
+  padding: 1.05em 1.2em;
+  overflow-x: auto;
+  box-sizing: border-box;
+  color: var(--html-code-text) !important;
+  font-size: 0.9em;
+  line-height: 1.62;
+  tab-size: 2;
+}
+.tool-md-preview pre code, .export-container pre code {
+  display: block;
+  min-width: max-content;
+  border: 0;
+  background: transparent !important;
+  color: var(--html-code-text) !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.tool-md-preview table, .export-container table { max-width: 100%; overflow-x: auto; }
+@media (max-width: 640px) {
+  .tool-md-preview, .export-container { padding: 28px 20px; }
+  .tool-md-preview pre, .export-container pre { margin-inline: -4px; padding: 0.9em 1em; }
+}
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
+body { margin: 0; background: #f6f8fa; color: #1f2328; }
+.tool-md-preview, .export-container {
+  background: #ffffff;
+  color: #1f2328;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  --html-code-text: #24292f;
+  --html-code-keyword: #cf222e;
+  --html-code-title: #8250df;
+  --html-code-string: #0a3069;
+  --html-code-number: #0550ae;
+  --html-code-comment: #6e7781;
+}
+h1, h2, h3, h4 { color: #1f2328; font-weight: 650; line-height: 1.25; }
+h1 { margin-bottom: 0.7em; padding-bottom: 0.32em; border-bottom: 1px solid #d8dee4; font-size: 2em; }
+h2 { margin-top: 1.75em; padding-bottom: 0.3em; border-bottom: 1px solid #d8dee4; font-size: 1.5em; }
+h3 { margin-top: 1.5em; font-size: 1.25em; }
+a { color: #0969da; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+blockquote { margin: 1em 0; padding: 0 1em; border-left: 0.25em solid #d0d7de; color: #59636e; }
+code { border-radius: 6px; background: #eff1f3; color: #1f2328; padding: 0.18em 0.38em; font-size: 0.88em; }
+pre { border: 1px solid #d8dee4; border-radius: 8px; background: #f6f8fa; box-shadow: none; }
+pre code { background: transparent; padding: 0; }
+table { display: table; width: 100%; border-spacing: 0; border-collapse: collapse; }
+th { background: #f6f8fa; font-weight: 650; }
+th, td { border: 1px solid #d0d7de; padding: 0.55em 0.8em; }
+tr:nth-child(2n) { background: #f6f8fa; }
+hr { height: 1px; border: 0; background: #d8dee4; }
+img { border-radius: 6px; }
 
-<body class="stackedit">
-  <div class="stackedit__html"><h1 id="privacy-policy">Privacy Policy</h1>
-<p>Effective date: August 15, 2026.</p>
-<p>This privacy policy is in English. Read it also in <a href="pp_es.html">Español</a>.</p>
-<h2 id="responsibility">Responsibility</h2>
-<p>Óscar Fiz Arnés<br>
-Calle Entre Eras, 71<br>
-<a href="mailto:wolkar.rblx@gmail.com">wolkar.rblx@gmail.com</a></p>
-<h2 id="data-we-collect">Data We Collect</h2>
-<h3 id="data-collected-by-diazen">Data collected by Diazen</h3>
-<ul>
+.tool-md-preview pre .hljs-keyword, .export-container pre .hljs-keyword,
+.tool-md-preview pre .hljs-selector-tag, .export-container pre .hljs-selector-tag,
+.tool-md-preview pre .hljs-literal, .export-container pre .hljs-literal { color: var(--html-code-keyword) !important; }
+.tool-md-preview pre .hljs-title, .export-container pre .hljs-title,
+.tool-md-preview pre .hljs-title.function_, .export-container pre .hljs-title.function_,
+.tool-md-preview pre .hljs-built_in, .export-container pre .hljs-built_in { color: var(--html-code-title) !important; }
+.tool-md-preview pre .hljs-string, .export-container pre .hljs-string,
+.tool-md-preview pre .hljs-attr, .export-container pre .hljs-attr,
+.tool-md-preview pre .hljs-name, .export-container pre .hljs-name { color: var(--html-code-string) !important; }
+.tool-md-preview pre .hljs-number, .export-container pre .hljs-number,
+.tool-md-preview pre .hljs-symbol, .export-container pre .hljs-symbol,
+.tool-md-preview pre .hljs-variable, .export-container pre .hljs-variable { color: var(--html-code-number) !important; }
+.tool-md-preview pre .hljs-comment, .export-container pre .hljs-comment,
+.tool-md-preview pre .hljs-quote, .export-container pre .hljs-quote { color: var(--html-code-comment) !important; font-style: italic; }
+.tool-md-preview pre .hljs-params, .export-container pre .hljs-params,
+.tool-md-preview pre .hljs-punctuation, .export-container pre .hljs-punctuation { color: var(--html-code-text) !important; }
+</style>
+<div class="export-container">
+<h2 id="privacy-policy">Privacy Policy</h2><p>Effective date: October 5, 2026.</p>
+<p>This privacy policy is in English. Read it also in <a href="https://wolkar-dev.github.io/diabetesassis/policies/pp_es.html">Español</a>.</p>
+<h2 id="responsibility">Responsibility</h2><ul>
+<li>Óscar Fiz Arnés</li>
+<li><a href="mailto:wolkar.rblx@gmail.com">wolkar.rblx@gmail.com</a></li>
+</ul>
+<h2 id="data-we-collect">Data We Collect</h2><h3 id="data-collected-by-diazen">Data collected by Diazen</h3><ul>
 <li>Calculator servings, menus, records, profiles, preferences, ingredients, camera, and general Diazen usage data.</li>
 <li>AI requests from the serving calculator.</li>
 </ul>
-<h3 id="data-automatically-collected-by-third-parties">Data automatically collected by third parties</h3>
-<ul>
+<h3 id="data-automatically-collected-by-third-parties">Data automatically collected by third parties</h3><ul>
 <li>When using Diazen, Google AdMob may automatically collect: advertising identifiers (IDFA on iOS, GAID on Android), IP address, app usage data, device information (model, operating system, language) and, where applicable, approximate location. This data is used to display personalized or contextual ads, provided consent is given when starting Diazen.</li>
 </ul>
-<h2 id="purpose-of-processing">Purpose of Processing</h2>
-<ul>
+<h2 id="purpose-of-processing">Purpose of Processing</h2><ul>
 <li><strong>Data collected by Diazen (except AI):</strong> To perform calculations locally, enable data persistence, and improve the daily utility and use of Diazen.</li>
 <li><strong>AI in Diazen:</strong> To process information on an external server and perform the final calculation locally.</li>
-<li><strong>Advertising:</strong> We use Google AdMob to display ads within the app. This includes:
-<ul>
+<li><strong>Advertising:</strong> We use Google AdMob to display ads within the app. This includes:<ul>
 <li>Personalized advertising: based on your interests and browsing profile (only with your prior consent, managed through our consent system).</li>
 <li>Non-personalized advertising: based on the context of the app, without behavioral profiling.</li>
 </ul>
 </li>
 </ul>
-<h2 id="legal-basis">Legal Basis</h2>
-<ul>
+<h2 id="legal-basis">Legal Basis</h2><ul>
 <li><strong>Local data:</strong> Based on the legitimate consent of the user, given when starting Diazen. This data can be deleted from the device settings at Apps &gt; Diazen &gt; Clear Data. It is also deleted when Diazen is uninstalled.</li>
-<li><strong>Advertising:</strong> The processing of data for personalized advertising is based on the user’s consent, requested through our Consent Management Platform (CMP) when the app is first launched. The user may revoke this consent at any time from the device settings.</li>
+<li><strong>Advertising:</strong> The processing of data for personalized advertising is based on the user's consent, requested through our Consent Management Platform (CMP) when the app is first launched. The user may revoke this consent at any time from the device settings.</li>
 </ul>
-<h2 id="recipients-and-disclosures">Recipients and Disclosures</h2>
-<ul>
+<h2 id="recipients-and-disclosures">Recipients and Disclosures</h2><ul>
 <li><strong>Data entered by the user in Diazen (except AI):</strong> This data is not shared with third parties; it is stored locally and serves exclusively to improve the quality of Diazen.</li>
 <li><strong>Diazen AI data:</strong> This data is sent to servers in the United States for non-local AI processing. Final calculations are performed within Diazen.</li>
-<li><strong>Google AdMob:</strong> Google acts as a data processor for the provision of the advertising service. Data may be transferred to the United States safeguarded by the Standard Contractual Clauses of the European Commission.<br>
-You can consult Google’s privacy policy here: <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+<li><strong>Google AdMob:</strong> Google acts as a data processor for the provision of the advertising service. Data may be transferred to the United States safeguarded by the Standard Contractual Clauses of the European Commission.
+You can consult Google's privacy policy here: <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
 </ul>
-<h2 id="data-transfers">Data Transfers</h2>
-<ul>
+<h2 id="data-transfers">Data Transfers</h2><ul>
 <li><strong>Advertising:</strong> Some of our providers, such as Google LLC (AdMob), are based in the United States. When you use the app, your data may be transferred outside the European Economic Area. Google guarantees these transfers through Standard Contractual Clauses approved by the European Commission.</li>
 </ul>
-<h2 id="retention-periods">Retention Periods</h2>
-<ul>
+<h2 id="retention-periods">Retention Periods</h2><ul>
 <li><strong>User local data in Diazen:</strong> Stored locally on a permanent basis. Only records are deleted within 31 days from their creation.</li>
 </ul>
-<h2 id="user-rights">User Rights</h2>
-<p>The user has the right to:</p>
+<h2 id="user-rights">User Rights</h2><p>The user has the right to:</p>
 <ul>
 <li><strong>Access their data</strong> for use in Diazen.</li>
 <li><strong>Deletion of data</strong> for the removal of local data.</li>
 <li><strong>Object to the collection of data for advertising</strong> in the device settings.</li>
 </ul>
 <p>You may send an email to <a href="mailto:wolkar.rblx@gmail.com">wolkar.rblx@gmail.com</a> for more information on how to exercise your rights.</p>
-<h2 id="security-measures">Security Measures</h2>
-<p>User data is confidential and stored locally on their device. This data is always kept anonymous. Data sent for cloud processing (AI) is anonymous and kept encrypted.</p>
-<h2 id="changes-to-the-privacy-policy">Changes to the Privacy Policy</h2>
-<p>We reserve the right to make modifications to this policy at any time. You will be notified with each Diazen update when launching the application.</p>
-</div>
-</body>
+<h2 id="security-measures">Security Measures</h2><p>User data is confidential and stored locally on their device. This data is always kept anonymous. Data sent for cloud processing (AI) is anonymous and kept encrypted.</p>
+<h2 id="changes-to-the-privacy-policy">Changes to the Privacy Policy</h2><p>We reserve the right to make modifications to this policy at any time. You will be notified with each Diazen update when launching the application.</p>
 
-</html>
+</div>
